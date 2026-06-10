@@ -1,0 +1,26 @@
+{
+  "$comment": "ENTWURF — URLs durch Joscha Falck zu prüfen und zu ergänzen (PLATZHALTER: Die Ziel-URLs für Architektur-Artikel und Raster-Builder bitte bestätigen oder korrigieren).",
+  "links": [
+    {
+      "id": "link-architektur",
+      "label": "Artikel: Architektur schulischer KI-Konzepte",
+      "url": "https://joschafalck.de/",
+      "type": "artikel",
+      "contexts": ["d1", "hebel-1", "sec-praeambel"]
+    },
+    {
+      "id": "link-raster-builder",
+      "label": "Bewertungsraster-Builder für KI-gestützte Leistungen",
+      "url": "https://joschafalck.github.io/ki-bewertungsraster/",
+      "type": "tool",
+      "contexts": ["d3", "hebel-2", "sec-pruefen"]
+    },
+    {
+      "id": "link-kompetenzrahmen",
+      "label": "Material: KI-Kompetenzen für Schüler:innen",
+      "url": "https://joschafalck.de/",
+      "type": "material",
+      "contexts": ["d4", "sec-kompetenzen"]
+    }
+  ]
+}

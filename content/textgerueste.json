@@ -1,0 +1,596 @@
+{
+  "$comment": "ENTWURF von Claude als Diskussionsgrundlage — fachliche Ausarbeitung durch Joscha Falck erforderlich. Kapitel sec-pruefen stammt aus content-beispiele/textgerueste.example.json (Strukturreferenz). Prinzip: Gerüste strukturieren, Leerstellen erzwingen schulspezifische Entscheidungen. hint-Segmente erscheinen nicht im Export. Reihenfolge der sections = Kapitelreihenfolge im Export (Kapitel 'Ausgangslage' wird automatisch aus der Diagnose erzeugt und nach der Präambel eingefügt).",
+  "contentVersion": "0.1-entwurf",
+  "sections": [
+    {
+      "id": "sec-praeambel",
+      "title": "Präambel & Selbstverständnis",
+      "leitfragen": [
+        "Warum geben wir uns als Schule ein KI-Konzept — was ist unser Anspruch?",
+        "Welche Haltung zu KI trägt unsere Schulgemeinschaft?",
+        "Was soll dieses Konzept leisten — und was bewusst nicht?"
+      ],
+      "templates": [
+        {
+          "id": "tpl-praeambel-a",
+          "label": "Variante A: Selbstverständnis ausformulieren",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Künstliche Intelligenz verändert das Lernen, das Arbeiten und das Aufwachsen unserer Schüler:innen. Unsere Schule begegnet dieser Entwicklung weder mit Verboten noch mit unkritischer Begeisterung, sondern mit einer eigenen, begründeten Position: "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Grundposition der Schule",
+              "placeholder": "Wofür steht unsere Schule beim Thema KI? In zwei bis drei Sätzen — diskutiert, nicht diktiert.",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Dieses Konzept beschreibt den Arbeitsstand unserer Verständigung. Es wurde erarbeitet von: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Erarbeitungsweg",
+              "placeholder": "Funktionsbezeichnungen, keine Namen — z. B. Steuergruppe Digitalisierung, erweitert um Fachschaftsvertretungen; Beteiligung von SMV und Elternbeirat",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Es wird regelmäßig überprüft und fortgeschrieben. Der nächste Überprüfungstermin ist: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Fortschreibungstermin",
+              "placeholder": "z. B. Ende des Schuljahres 2026/27",
+              "required": true,
+              "multiline": false
+            },
+            {
+              "type": "hint",
+              "value": "Die Präambel ist der richtige Ort für Dissens-Transparenz: Wenn das Kollegium in Teilfragen uneinig ist, gehört das benannt — ein Konzept, das Einigkeit behauptet, die es nicht gibt, wird nicht gelebt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-regeln",
+      "title": "Regeln für die KI-Nutzung",
+      "leitfragen": [
+        "Was dürfen Schüler:innen mit KI — und was nicht? Gilt das überall gleich?",
+        "Wie wird KI-Nutzung gekennzeichnet, und wer hat das den Schüler:innen erklärt?",
+        "Welche Orientierung haben Lehrkräfte für ihre eigene dienstliche Nutzung?"
+      ],
+      "templates": [
+        {
+          "id": "tpl-regeln-a",
+          "label": "Variante A: Schulweite Grundregeln",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Für die KI-Nutzung durch Schüler:innen gelten an unserer Schule folgende Grundregeln: "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Grundregeln für Schüler:innen",
+              "placeholder": "z. B. erlaubte und nicht erlaubte Nutzungen, Kennzeichnungspflicht, Umgang mit personenbezogenen Daten — was gilt konkret bei uns?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Diese Regeln werden den Schüler:innen vermittelt durch: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Vermittlungsweg",
+              "placeholder": "z. B. Einführung zu Schuljahresbeginn in allen Klassen, Aushang, Behandlung im Fachunterricht — wer macht was, wann?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Für die dienstliche KI-Nutzung durch Lehrkräfte gilt: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Orientierung für Lehrkräfte",
+              "placeholder": "z. B. Handreichung mit erlaubten Werkzeugen und No-Gos (insbesondere Schülerdaten), Ansprechperson für Zweifelsfälle — was existiert, wer pflegt es?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Die Regeln werden überprüft und fortgeschrieben durch: "
+            },
+            {
+              "type": "field",
+              "id": "f4",
+              "label": "Verantwortung für Fortschreibung",
+              "placeholder": "Funktionsbezeichnung, keine Namen — z. B. Steuergruppe, jährlich vor Schuljahresende",
+              "required": true,
+              "multiline": false
+            },
+            {
+              "type": "hint",
+              "value": "Beteiligung: Regeln für Schüler:innen gehören in Lehrerkonferenz und Schulforum/Schulkonferenz; SMV und Elternbeirat sollten gehört werden (vgl. Diagnose d1-i5)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-unterricht",
+      "title": "Lehren & Lernen mit KI",
+      "leitfragen": [
+        "In welchen Fächern und Jahrgangsstufen wird KI didaktisch begründet eingesetzt?",
+        "Wo verzichten wir bewusst auf KI — und warum?",
+        "Wie verändert sich unsere Aufgabenkultur, wenn viele Aufgaben durch KI lösbar sind?"
+      ],
+      "templates": [
+        {
+          "id": "tpl-unterricht-a",
+          "label": "Variante A: Einsatzfelder und bewusste Grenzen",
+          "segments": [
+            {
+              "type": "text",
+              "value": "KI wird an unserer Schule didaktisch begründet eingesetzt. Unsere zentralen Einsatzfelder sind: "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Einsatzfelder",
+              "placeholder": "z. B. Schreibbegleitung und Feedback, Differenzierung, Recherche- und Quellenkritik — in welchen Fächern und Jahrgangsstufen?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Ebenso bewusst verzichten wir in folgenden Bereichen auf KI-Einsatz: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Bewusste KI-freie Bereiche",
+              "placeholder": "z. B. Erstschreiberwerb, bestimmte Übungsphasen — mit kurzer Begründung",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Unsere Aufgabenkultur passen wir an die Verfügbarkeit von KI an: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Vereinbarungen zur Aufgabenkultur",
+              "placeholder": "z. B. Kennzeichnung von Aufgaben (KI-frei / KI-begleitet / KI-offen), Umgang mit Hausaufgaben — was ist vereinbart?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Erfahrungen aus dem Unterricht werden gesammelt und weitergegeben durch: "
+            },
+            {
+              "type": "field",
+              "id": "f4",
+              "label": "Austauschformat",
+              "placeholder": "z. B. Mikrofortbildungen, gemeinsame Szenariensammlung, fester Tagesordnungspunkt in Fachschaften",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "hint",
+              "value": "Ein Konzept muss nicht alle Fächer abdecken. Ehrlicher ist: benennen, wo die Schule steht, und Erprobungsräume ausweisen (vgl. Diagnose d2)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-pruefen",
+      "title": "Prüfen & Bewerten",
+      "leitfragen": [
+        "Welche unserer Prüfungsformate sind durch KI-Nutzung entwertet, welche nicht?",
+        "Wo erlauben wir KI in Leistungsnachweisen ausdrücklich, und wie machen wir Eigenleistung sichtbar?",
+        "Wie gehen wir mit Verdachtsfällen um, ohne eine Misstrauenskultur zu etablieren?"
+      ],
+      "templates": [
+        {
+          "id": "tpl-pruefen-a",
+          "label": "Variante A: Formate differenzieren (über/mit KI)",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Unsere Schule unterscheidet Leistungsnachweise danach, ob sie ohne KI-Unterstützung (KI-frei, unter Aufsicht) oder mit ausgewiesener KI-Unterstützung erbracht werden. KI-freie Formate setzen wir insbesondere ein für: "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Einsatzbereiche KI-freier Formate",
+              "placeholder": "z. B. Grundwissen, Schreibflüssigkeit, mündliche Formate — was genau an unserer Schule?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Für Formate mit KI-Unterstützung gilt: Schüler:innen legen die Nutzung offen, und die Eigenleistung wird sichtbar gemacht durch: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Sichtbarmachung der Eigenleistung",
+              "placeholder": "z. B. Prozessdokumentation, Reflexionsteil, Kolloquium — welche Form wählt unsere Schule verbindlich?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Die Bewertung KI-gestützter Leistungen erfolgt anhand transparenter Kriterien, die den Schüler:innen vor Beginn der Arbeit bekannt sind. Wir nutzen dafür: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Bewertungsinstrumente",
+              "placeholder": "z. B. schulweit abgestimmte Bewertungsraster je Fachschaft — welche, und wer pflegt sie?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "hint",
+              "value": "Vertiefung: Bewertungsraster-Builder und Leitfaden „Prüfen und Bewerten“ (Verlinkung über links.json, Kontext sec-pruefen)."
+            },
+            {
+              "type": "hint",
+              "value": "Beteiligung: Beschlussfassung in der Lehrerkonferenz empfohlen; Information von Schulforum/Schulkonferenz und Elternbeirat."
+            }
+          ]
+        },
+        {
+          "id": "tpl-pruefen-b",
+          "label": "Variante B: Schrittweise Erprobung (Pilotfächer)",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Unsere Schule entwickelt ihre Prüfungskultur schrittweise weiter. Im Schuljahr "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Zeitraum",
+              "placeholder": "z. B. 2026/27",
+              "required": true,
+              "multiline": false
+            },
+            {
+              "type": "text",
+              "value": " erproben folgende Fachschaften KI-bewusste Prüfungsformate: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Pilotfachschaften und Formate",
+              "placeholder": "Welche Fachschaften, welche Formate, in welchen Jahrgangsstufen?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Die Erprobung wird begleitet und ausgewertet. Verantwortlich für die Auswertung und den Transfer in die übrigen Fachschaften ist: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Verantwortung für Auswertung und Transfer",
+              "placeholder": "Funktionsbezeichnung, keine Namen — z. B. Steuergruppe Digitalisierung, Fachschaftsleitungen",
+              "required": true,
+              "multiline": false
+            },
+            {
+              "type": "text",
+              "value": "Bis zur Auswertung gilt für alle übrigen Leistungsnachweise folgende Übergangsregel: "
+            },
+            {
+              "type": "field",
+              "id": "f4",
+              "label": "Übergangsregel",
+              "placeholder": "Was gilt einstweilen schulweit? Diese Leerstelle bewusst nicht überspringen — ohne Übergangsregel entsteht ein Graubereich.",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "hint",
+              "value": "Variante B eignet sich für Kollegien mit großer Heterogenität in der Haltung (vgl. Diagnose d1-i4): Erprobung statt Vollbeschluss senkt Widerstände, braucht aber einen klaren Auswertungstermin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-kompetenzen",
+      "title": "KI-Kompetenzen der Schüler:innen",
+      "leitfragen": [
+        "Was sollen Schüler:innen über KI wissen und können — wann und in welchen Fächern?",
+        "Wie lernen sie, KI-Ausgaben kritisch zu prüfen statt zu übernehmen?",
+        "Wie wird Eigenleistung beim Arbeiten mit KI für Schüler:innen verstehbar?"
+      ],
+      "templates": [
+        {
+          "id": "tpl-kompetenzen-a",
+          "label": "Variante A: Kompetenzaufbau verorten",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Unsere Schüler:innen bauen KI-Kompetenz systematisch auf. Grundverständnis (Funktionsweise, Grenzen, Halluzinationen) wird vermittelt in: "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Verortung des Grundverständnisses",
+              "placeholder": "Welche Fächer, welche Jahrgangsstufen, welche Bausteine? So konkret, dass eine neue Kollegin weiß, was wann passiert.",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Das kritische Prüfen von KI-Ausgaben wird geübt durch: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Übungsformate Kritikfähigkeit",
+              "placeholder": "z. B. Faktencheck-Aufgaben, Fehlersuche in KI-Texten, Quellenvergleich — in welchen Fächern verankert?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Was Eigenleistung beim Arbeiten mit KI bedeutet und wie KI-Beiträge gekennzeichnet werden, erarbeiten wir mit den Schüler:innen folgendermaßen: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Eigenleistung und Kennzeichnung",
+              "placeholder": "z. B. eingeführte Kennzeichnungskonvention, Thematisierung zu Schuljahresbeginn, Bezug zu Leistungsnachweisen",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Gesellschaftliche und ethische Dimensionen von KI behandeln wir in: "
+            },
+            {
+              "type": "field",
+              "id": "f4",
+              "label": "Gesellschaftliche Dimensionen",
+              "placeholder": "z. B. Verankerung in Deutsch, Ethik/Religion, Sozialkunde; Projekttage, Debattenformate",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "hint",
+              "value": "Bezug zur Diagnose: Dimension d4. Wenn dort niedrige Werte vorliegen, gehört dieses Kapitel in den Maßnahmenplan, nicht nur ins Konzept."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-fortbildung",
+      "title": "Fortbildung & Professionalisierung",
+      "leitfragen": [
+        "Wie erreichen wir alle Lehrkräfte — nicht nur die ohnehin Interessierten?",
+        "Welche Formate (Basis, Vertiefung, Mikrofortbildung) bieten wir wem an?",
+        "Woher kommt die Zeit dafür — und was lassen wir dafür weg?"
+      ],
+      "templates": [
+        {
+          "id": "tpl-fortbildung-a",
+          "label": "Variante A: Gestuftes Fortbildungskonzept",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Die Professionalisierung des Kollegiums zu KI erfolgt gestuft. Für alle Lehrkräfte verbindlich ist: "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Basisangebot für alle",
+              "placeholder": "z. B. Basisschulung zu Grundlagen, Datenschutz und schulischen Regeln — wann, durch wen?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Darauf aufbauend gibt es bedarfsorientierte Vertiefungen: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Vertiefungsangebote",
+              "placeholder": "z. B. fachspezifische Workshops, Mikrofortbildungen, kollegiale Hospitation — was, wie oft?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Kollegiale Unterstützung im Alltag leisten: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Unterstützungsstruktur",
+              "placeholder": "Funktionsbezeichnungen, keine Namen — z. B. Multiplikator:innen-Team, feste Ansprechpersonen, Sprechzeiten",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Die dafür nötige Zeit entsteht, indem wir Folgendes zurückstellen oder beenden: "
+            },
+            {
+              "type": "field",
+              "id": "f4",
+              "label": "Entlastung (De-Implementierung)",
+              "placeholder": "Welche bisherigen Aktivitäten entfallen oder werden reduziert? Ohne Antwort wird das Fortbildungskonzept zur Zusatzbelastung.",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "hint",
+              "value": "Bezug zur Diagnose: Dimension d5, insbesondere d5-i4 (Zeit und Anerkennung). Die Entlastungsfrage hier ist dieselbe wie im Maßnahmenplaner — bewusst doppelt verankert."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-technik",
+      "title": "Technik, Recht & Datenschutz",
+      "leitfragen": [
+        "Welche KI-Werkzeuge stellt die Schule bereit, und nach welchen Kriterien wurden sie ausgewählt?",
+        "Wie stellen wir sicher, dass keine personenbezogenen Daten in offene Dienste gelangen?",
+        "Wie gleichen wir ungleiche häusliche Voraussetzungen aus?"
+      ],
+      "templates": [
+        {
+          "id": "tpl-technik-a",
+          "label": "Variante A: Bereitstellung, Datenschutz, Gerechtigkeit",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Unsere Schule stellt folgende KI-Zugänge bereit: "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Bereitgestellte Zugänge",
+              "placeholder": "Welche Werkzeugkategorien (z. B. landesbereitgestellter Chatbot, Lernplattform-Integration), für wen — ohne kommerzielle Produktnamen im normativen Teil; Beispiele mit „z. B.“",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Für den Schutz personenbezogener Daten gilt verbindlich: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Datenschutzregeln",
+              "placeholder": "z. B. keine Schülerdaten in offene Dienste, Anonymisierungsgebot, Prüfweg für neue Werkzeuge, Einbindung des Datenschutzbeauftragten",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Ungleiche häusliche Voraussetzungen gleichen wir aus durch: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Maßnahmen zur Chancengerechtigkeit",
+              "placeholder": "z. B. schulische Zugänge für alle relevanten Lerngruppen, Nutzungszeiten in der Schule, keine Aufgaben, die private Bezahl-Abos voraussetzen",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Zuständig für Beschaffung, Prüfung und rechtliche Beobachtung ist: "
+            },
+            {
+              "type": "field",
+              "id": "f4",
+              "label": "Zuständigkeit",
+              "placeholder": "Funktionsbezeichnung, keine Namen — z. B. Systembetreuung gemeinsam mit Steuergruppe, in Abstimmung mit Schulleitung und Sachaufwandsträger",
+              "required": true,
+              "multiline": false
+            },
+            {
+              "type": "hint",
+              "value": "Redaktionsregel: keine kommerziellen Tool-Namen im normativen Text (Veralterung, Neutralität). Werkzeuge nur exemplarisch mit „z. B.“ nennen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-steuerung",
+      "title": "Steuerung, Evaluation & Fortschreibung",
+      "leitfragen": [
+        "Wer steuert die Umsetzung dieses Konzepts — mit welchem Mandat?",
+        "Woran erkennen wir, ob unsere Maßnahmen wirken?",
+        "Wann und wie wird dieses Konzept fortgeschrieben?"
+      ],
+      "templates": [
+        {
+          "id": "tpl-steuerung-a",
+          "label": "Variante A: Steuerungszyklus festlegen",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Die Umsetzung dieses Konzepts steuert: "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Steuerungsstruktur",
+              "placeholder": "Funktionsbezeichnung, keine Namen — z. B. Steuergruppe Digitalisierung mit Mandat der Schulleitung; Zusammensetzung nach Funktionen",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Sie berichtet regelmäßig an das Kollegium und die Gremien: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Berichtsrhythmus",
+              "placeholder": "z. B. je Halbjahr in der Lehrerkonferenz, jährlich im Schulforum",
+              "required": true,
+              "multiline": false
+            },
+            {
+              "type": "text",
+              "value": "Ob die vereinbarten Maßnahmen wirken, überprüfen wir folgendermaßen: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Evaluationsverfahren",
+              "placeholder": "z. B. Wiederholung der Selbstdiagnose nach einem Jahr, kurze Befragungen, Auswertungstermine je Maßnahme",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Dieses Konzept wird fortgeschrieben: "
+            },
+            {
+              "type": "field",
+              "id": "f4",
+              "label": "Fortschreibungsregel",
+              "placeholder": "z. B. jährlich zum Schuljahresende; außerplanmäßig bei wesentlichen rechtlichen oder technischen Änderungen",
+              "required": true,
+              "multiline": false
+            },
+            {
+              "type": "hint",
+              "value": "Bezug zur Diagnose: Dimension d6. Die Wiederholung der Selbstdiagnose mit diesem Werkzeug ist ein einfaches, vergleichbares Evaluationsinstrument."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

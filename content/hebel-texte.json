@@ -1,0 +1,39 @@
+{
+  "$comment": "ENTWURF von Claude als Diskussionsgrundlage — fachliche Prüfung durch Joscha Falck erforderlich. Texte zu den fünf Hebel-Regeln aus Spezifikation 5.2. linkIds verweisen auf links.json.",
+  "regeln": {
+    "fundament": {
+      "id": "hebel-1",
+      "titel": "Beginnt beim Fundament",
+      "text": "Ihre Einschätzungen zeigen: Die grundlegende Verständigung über Haltung und Regeln (Dimension „Haltung & Regeln“) steht an Ihrer Schule noch am Anfang. Das ist kein Makel, aber eine wichtige Information für die Reihenfolge Ihrer nächsten Schritte. Maßnahmen in anderen Bereichen — etwa neue Werkzeuge oder Fortbildungsreihen — bauen auf dieser Verständigung auf. Ohne sie bleiben Regeln Einzelentscheidungen und Konflikte Privatsache. Empfehlung: Planen Sie zuerst ein strukturiertes Verständigungsformat (z. B. einen pädagogischen Tag mit moderierter Positionsklärung), bevor Sie in die Breite gehen.",
+      "linkIds": ["link-architektur"]
+    },
+    "pruefung": {
+      "id": "hebel-2",
+      "titel": "Unterricht und Prüfungskultur passen nicht zusammen",
+      "text": "Ihre Einschätzungen zeigen eine Inkonsistenz: Im Unterricht ist KI bereits erkennbar integriert (Dimension „Lehren & Lernen“), die Prüfungs- und Bewertungskultur hat darauf aber noch kaum reagiert (Dimension „Prüfen & Bewerten“). Diese Lücke ist für Schüler:innen unmittelbar spürbar — sie lernen mit KI, werden aber geprüft, als gäbe es sie nicht. Das erzeugt Graubereiche und entwertet beides. Empfehlung: Machen Sie die Überprüfung Ihrer Leistungsnachweise zum nächsten Schwerpunkt, etwa mit einer systematischen Sichtung je Fachschaft und abgestimmten Bewertungsinstrumenten.",
+      "linkIds": ["link-raster-builder"]
+    },
+    "governance": {
+      "id": "hebel-3",
+      "titel": "Ohne Steuerung versanden Maßnahmen",
+      "text": "Ihre Einschätzungen zeigen: Es fehlt eine tragfähige Steuerungsstruktur (Dimension „Steuerung & Schulentwicklung“). Erfahrungsgemäß versanden auch gute inhaltliche Maßnahmen, wenn niemand mit Mandat ihre Umsetzung verfolgt, Beschlüsse dokumentiert und das Thema in den Gremien wachhält. Empfehlung: Klären Sie vor weiteren inhaltlichen Maßnahmen die Verantwortungsfrage — eine beauftragte Steuergruppe mit klarem Auftrag der Schulleitung, verteilt auf mehrere Schultern. Das ist unspektakulär, aber die Voraussetzung dafür, dass alles andere trägt.",
+      "linkIds": []
+    },
+    "spreizung": {
+      "id": "hebel-4",
+      "titel": "Große Ungleichzeitigkeit zwischen den Dimensionen",
+      "text": "Ihre Einschätzungen zeigen eine deutliche Spreizung: Zwischen Ihrer stärksten und Ihrer schwächsten Dimension liegt mehr als anderthalb Stufen. Solche Ungleichzeitigkeiten sind normal — sie werden aber zum Problem, wenn die starken Bereiche auf den schwachen aufbauen müssen. Empfehlung: Setzen Sie Ihren Maßnahmenschwerpunkt gezielt auf die niedrigste Dimension, statt die ohnehin starken Bereiche weiter auszubauen. Der Maßnahmenplaner zeigt Ihnen die Dimension zu jeder Maßnahme an.",
+      "linkIds": []
+    },
+    "default": {
+      "id": "hebel-5",
+      "titel": "Ihre Entwicklungsfelder",
+      "text": "Ihre Einschätzungen ergeben ein relativ ausgewogenes Bild ohne kritische Schieflage. Für die Maßnahmenplanung empfehlen wir, bei den zwei Dimensionen mit den niedrigsten Mittelwerten anzusetzen — dort ist der Hebel am größten. Beide sind unten als Entwicklungsfelder ausgewiesen. Weniger ist mehr: Zwei bis drei gut verankerte Maßnahmen mit klarer Verantwortung bewirken mehr als ein Katalog, den niemand verfolgt.",
+      "linkIds": []
+    }
+  },
+  "irritation": {
+    "titel": "Ein ungewöhnlich positives Bild — bitte prüfen Sie es gemeinsam",
+    "text": "Alle sieben Dimensionen liegen im obersten Bereich. Das kann zutreffen — es wäre allerdings ein außergewöhnlicher Stand, den bislang nur sehr wenige Schulen erreichen. Erfahrungsgemäß entstehen solche Bilder auch, wenn die Einschätzung von einer kleinen, besonders engagierten Gruppe vorgenommen wird. Zwei Prüffragen: Können Sie für die hohen Einschätzungen jeweils konkrete Belege benennen (Beschlüsse, Dokumente, beobachtbare Praxis)? Und würde eine zweite Gruppe — etwa eine erweiterte Steuergruppe oder eine Fachschaft, die bisher nicht beteiligt war — zum selben Ergebnis kommen? Wir empfehlen, die Einschätzung mit einer solchen Gruppe zu validieren, bevor Sie das Konzept darauf aufbauen."
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$comment": "ENTWURF von Claude als Diskussionsgrundlage — fachliche Prüfung durch Joscha Falck erforderlich. Diskussionskarten für Konferenzen und pädagogische Tage; Druck als 2×3-Raster pro A4-Seite mit Schnittlinien.",
+  "karten": [
+    {
+      "id": "karte-1",
+      "these": "Wenn eine Hausaufgabe vollständig von einer KI erledigt werden kann, war sie schon vorher keine gute Aufgabe.",
+      "hinweis": "Einstieg in die Aufgabenkultur-Debatte; bewusst zugespitzt."
+    },
+    {
+      "id": "karte-2",
+      "these": "Unsere Schüler:innen nutzen KI längst. Die Frage ist nicht ob, sondern ob mit oder ohne uns.",
+      "hinweis": "Geeignet für Kollegien, die das Thema bislang vertagt haben."
+    },
+    {
+      "id": "karte-3",
+      "these": "Wer KI-Nutzung offenlegt, darf dadurch keinen Nachteil haben — sonst erziehen wir zur Verheimlichung.",
+      "hinweis": "Kern der Kennzeichnungs- und Vertrauensfrage (vgl. Prüfen & Bewerten)."
+    },
+    {
+      "id": "karte-4",
+      "these": "Eine Schule, die KI-Detektoren einsetzt, hat das Prüfungsproblem nicht gelöst, sondern delegiert — an ein Werkzeug, das nicht funktioniert.",
+      "hinweis": "Faktenbasis: Detektoren liefern keine gerichtsfesten Belege und produzieren falsche Verdächtigungen."
+    },
+    {
+      "id": "karte-5",
+      "these": "Skeptische Kolleg:innen sind kein Hindernis der KI-Schulentwicklung, sondern ihr Qualitätssicherungssystem.",
+      "hinweis": "Lädt ein, Kritik als Ressource zu rahmen (vgl. Haltung & Regeln)."
+    },
+    {
+      "id": "karte-6",
+      "these": "Jede neue KI-Maßnahme braucht eine Antwort auf die Frage: Was lassen wir dafür weg?",
+      "hinweis": "De-Implementierungs-Prinzip; Brücke zum Maßnahmenplaner."
+    },
+    {
+      "id": "karte-7",
+      "these": "Wenn KI-Kompetenz vom Elternhaus abhängt, vergrößert Schule die Schere, statt sie zu schließen.",
+      "hinweis": "Chancengerechtigkeit (vgl. Technik, Recht & Datenschutz)."
+    },
+    {
+      "id": "karte-8",
+      "these": "Ein KI-Konzept, das fertig ist, ist falsch. Es kann nur einen gepflegten Arbeitsstand geben.",
+      "hinweis": "Schlusskarte: Fortschreibung und Steuerung als Daueraufgabe."
+    }
+  ]
+}

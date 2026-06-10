@@ -1,0 +1,722 @@
+{
+  "$comment": "ENTWURF von Claude als Diskussionsgrundlage — fachliche Prüfung und Überarbeitung durch Joscha Falck erforderlich. Dimension d1 stammt wortgleich aus content-beispiele/diagnose-items.example.json (Qualitätsreferenz). d2–d7 folgen diesem Standard: verhaltensnah, beobachtbar, in einer Steuergruppe diskutierbar.",
+  "contentVersion": "0.1-entwurf",
+  "dimensions": [
+    {
+      "id": "d1",
+      "title": "Haltung & Regeln",
+      "leitfrage": "Haben wir uns als Schule verständigt, wie wir zu KI stehen und was bei uns gilt?",
+      "items": [
+        {
+          "id": "d1-i1",
+          "text": "Verständigung im Kollegium über den Umgang mit KI",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "KI war noch nie Gegenstand einer Konferenz oder eines pädagogischen Tags. Der Umgang ist Privatsache der einzelnen Lehrkraft."
+            },
+            {
+              "level": 1,
+              "description": "Es gab vereinzelte Gespräche oder einen Input (z. B. in einer Konferenz), aber keine strukturierte Auseinandersetzung. Positionen im Kollegium sind unbekannt oder werden nur informell ausgetauscht."
+            },
+            {
+              "level": 2,
+              "description": "Das Kollegium hat sich in mindestens einem moderierten Format (pädagogischer Tag, Konferenzschwerpunkt, Arbeitsgruppe) strukturiert mit Chancen, Risiken und der eigenen Haltung auseinandergesetzt. Unterschiedliche Positionen sind sichtbar und benannt."
+            },
+            {
+              "level": 3,
+              "description": "Die Auseinandersetzung ist wiederkehrend verankert (z. B. jährlicher Reflexionstermin). Es gibt eine dokumentierte gemeinsame Grundposition, die auch Dissens transparent macht und neuen Kolleg:innen vermittelt wird."
+            }
+          ]
+        },
+        {
+          "id": "d1-i2",
+          "text": "Verbindliche Regeln für die KI-Nutzung durch Schüler:innen",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Es gibt keine Regeln. Jede Lehrkraft entscheidet situativ und unterschiedlich; Schüler:innen erleben widersprüchliche Erwartungen."
+            },
+            {
+              "level": 1,
+              "description": "Einzelne Lehrkräfte oder Fachschaften haben eigene Regeln formuliert. Eine schulweite Linie existiert nicht oder ist nicht allen bekannt."
+            },
+            {
+              "level": 2,
+              "description": "Es gibt schulweit beschlossene Regeln (z. B. zu erlaubter Nutzung, Kennzeichnung, Eigenleistung), die den Schüler:innen aktiv vermittelt wurden. Die Anwendung ist im Alltag noch uneinheitlich."
+            },
+            {
+              "level": 3,
+              "description": "Die Regeln werden im Unterricht durchgängig gelebt, sind in Leistungsnachweisen operationalisiert (z. B. Kennzeichnungspflicht) und werden regelmäßig mit Schüler:innen besprochen und überarbeitet."
+            }
+          ]
+        },
+        {
+          "id": "d1-i3",
+          "text": "Orientierung für Lehrkräfte bei der eigenen dienstlichen KI-Nutzung",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Lehrkräfte wissen nicht, was sie dienstlich nutzen dürfen (Datenschutz, erlaubte Werkzeuge, Grenzen z. B. bei der Korrektur). Nutzung findet im Graubereich statt oder unterbleibt aus Unsicherheit."
+            },
+            {
+              "level": 1,
+              "description": "Es kursieren informelle Hinweise (Flurfunk, einzelne E-Mails), aber keine verlässliche, auffindbare Orientierung."
+            },
+            {
+              "level": 2,
+              "description": "Es gibt eine schriftliche, allen zugängliche Handreichung (erlaubte Werkzeuge, No-Gos insbesondere bei Schülerdaten, Ansprechpersonen). Sie ist bekannt, wird aber nicht systematisch aktualisiert."
+            },
+            {
+              "level": 3,
+              "description": "Die Handreichung wird regelmäßig aktualisiert, ist Teil der Einarbeitung neuer Kolleg:innen, und es gibt eine benannte Anlaufstelle für Zweifelsfälle, die auch tatsächlich genutzt wird."
+            }
+          ]
+        },
+        {
+          "id": "d1-i4",
+          "text": "Umgang mit Unsicherheit und Kontroversen im Kollegium",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Sorgen, Ablehnung oder Überforderung einzelner Kolleg:innen haben keinen Ort. Das Thema wird vermieden oder polarisiert informell (Befürworter vs. Skeptiker)."
+            },
+            {
+              "level": 1,
+              "description": "Unsicherheiten werden gelegentlich angesprochen, aber es gibt kein Format, in dem skeptische Positionen ernsthaft bearbeitet werden. Skeptiker:innen ziehen sich zurück."
+            },
+            {
+              "level": 2,
+              "description": "Kritische Positionen haben einen anerkannten Platz (z. B. in Arbeitsgruppen, Konferenzen). Bedenken fließen erkennbar in Entscheidungen ein, statt überstimmt zu werden."
+            },
+            {
+              "level": 3,
+              "description": "Die Schule nutzt Kontroversen produktiv: Skeptische Kolleg:innen übernehmen sichtbare Rollen (z. B. kritische Begleitung von Erprobungen), und Entscheidungen dokumentieren, welche Einwände wie berücksichtigt wurden."
+            }
+          ]
+        },
+        {
+          "id": "d1-i5",
+          "text": "Einbezug von Schüler:innen und Eltern in die Verständigung",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Schüler:innen und Eltern erfahren von Regeln und Haltung der Schule höchstens beiläufig. Es gibt keine Information und keine Beteiligung."
+            },
+            {
+              "level": 1,
+              "description": "Es gab punktuelle Information (z. B. ein Elternbrief, eine Erwähnung im Schulforum), aber keinen Dialog und keine Mitwirkung."
+            },
+            {
+              "level": 2,
+              "description": "Schüler:innen (z. B. über die SMV) und Eltern (z. B. über den Elternbeirat) wurden zu den Regeln gehört; ihre Rückmeldungen sind dokumentiert und mindestens teilweise eingeflossen."
+            },
+            {
+              "level": 3,
+              "description": "Beteiligung ist strukturell verankert: Schüler:innen- und Elternvertretungen wirken an der Fortschreibung der Regeln mit, und die Schule kommuniziert Haltung und Regeln aktiv und wiederkehrend (z. B. Jahrgangsstufen-Einführung, Elternabende)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d2",
+      "title": "Lehren & Lernen",
+      "leitfrage": "Ist KI didaktisch begründet in unseren Unterricht integriert — oder bleibt sie Einzelinitiative?",
+      "items": [
+        {
+          "id": "d2-i1",
+          "text": "Didaktisch begründeter KI-Einsatz im Unterricht",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "KI kommt im Unterricht nicht vor oder wird nur beiläufig erwähnt. Es gibt keine geplanten Lernsituationen, in denen Schüler:innen KI nutzen oder reflektieren."
+            },
+            {
+              "level": 1,
+              "description": "Einzelne Lehrkräfte setzen KI nach persönlichem Interesse ein. Die Einsätze sind weder dokumentiert noch begründet; andere Kolleg:innen wissen nichts davon."
+            },
+            {
+              "level": 2,
+              "description": "In mehreren Fächern und Jahrgangsstufen gibt es geplante, didaktisch begründete KI-Einsätze (z. B. Schreibbegleitung, Feedback, Recherchekritik). Erfahrungen werden in Fachschaften ausgetauscht."
+            },
+            {
+              "level": 3,
+              "description": "KI-Einsatz ist in schulinternen Curricula oder Jahresplanungen verankert, mit klarem Bezug zu Lernzielen. Es ist begründet, wo KI eingesetzt wird — und ebenso, wo bewusst nicht."
+            }
+          ]
+        },
+        {
+          "id": "d2-i2",
+          "text": "Austausch und Weitergabe von Unterrichtserfahrungen mit KI",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Es gibt keinen Austausch über KI im Unterricht. Wer etwas ausprobiert, behält die Erfahrung für sich."
+            },
+            {
+              "level": 1,
+              "description": "Austausch findet zufällig statt (Lehrerzimmergespräche, einzelne Empfehlungen). Es gibt keinen Ort, an dem Erprobtes gesammelt oder auffindbar gemacht wird."
+            },
+            {
+              "level": 2,
+              "description": "Es gibt ein etabliertes Format für den Austausch (z. B. Mikrofortbildungen, Fachschaftstagesordnungspunkt, gemeinsame Materialablage), das regelmäßig genutzt wird."
+            },
+            {
+              "level": 3,
+              "description": "Erprobte Szenarien werden systematisch dokumentiert und weitergegeben (z. B. interne Szenariensammlung mit didaktischem Kommentar); Hospitationen oder Co-Teaching zu KI-Einsätzen finden statt."
+            }
+          ]
+        },
+        {
+          "id": "d2-i3",
+          "text": "Reflexion der KI-Nutzung mit Schüler:innen im Unterricht",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Ob und wie Schüler:innen KI für schulische Aufgaben nutzen, wird im Unterricht nicht thematisiert."
+            },
+            {
+              "level": 1,
+              "description": "Einzelne Lehrkräfte sprechen die KI-Nutzung an, meist anlassbezogen (z. B. bei Verdachtsfällen). Eine konstruktive, regelmäßige Reflexion findet nicht statt."
+            },
+            {
+              "level": 2,
+              "description": "In mehreren Fächern wird die KI-Nutzung der Schüler:innen regelmäßig und konstruktiv reflektiert (z. B. Was hat die KI beigetragen? Was war deine Eigenleistung? Wo lag sie falsch?)."
+            },
+            {
+              "level": 3,
+              "description": "Reflexionsroutinen sind vereinbart und jahrgangsübergreifend etabliert (z. B. feste Reflexionsphasen bei KI-gestützten Aufgaben); Schüler:innen können ihre Nutzungsentscheidungen begründen."
+            }
+          ]
+        },
+        {
+          "id": "d2-i4",
+          "text": "Aufgabenkultur unter KI-Bedingungen",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Aufgabenstellungen (insbesondere Hausaufgaben) sind unverändert; dass viele davon vollständig durch KI lösbar sind, wird nicht bearbeitet."
+            },
+            {
+              "level": 1,
+              "description": "Einzelne Lehrkräfte passen Aufgaben an (z. B. prozessorientierte oder mündliche Anteile), aber ohne gemeinsame Linie oder Austausch darüber."
+            },
+            {
+              "level": 2,
+              "description": "Fachschaften haben begonnen, ihre Aufgabenformate systematisch zu sichten und KI-sensible Formate anzupassen; erste gemeinsame Vereinbarungen existieren."
+            },
+            {
+              "level": 3,
+              "description": "Die Schule hat eine abgestimmte Aufgabenkultur: Es ist transparent, welche Aufgabentypen KI-frei, KI-begleitet oder KI-offen gestellt werden, und Aufgaben werden entsprechend gekennzeichnet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d3",
+      "title": "Prüfen & Bewerten",
+      "leitfrage": "Hat unsere Prüfungs- und Bewertungskultur auf KI reagiert — oder prüfen wir, als gäbe es KI nicht?",
+      "items": [
+        {
+          "id": "d3-i1",
+          "text": "Überprüfung der bestehenden Prüfungsformate auf KI-Sensibilität",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Die Prüfungsformate sind unverändert. Welche davon durch KI-Nutzung entwertet werden (z. B. häusliche Schreibaufgaben), wurde nicht untersucht."
+            },
+            {
+              "level": 1,
+              "description": "Das Problem ist erkannt und wird diskutiert, aber es gibt keine systematische Bestandsaufnahme; Reaktionen sind individuell (z. B. einzelne Lehrkräfte stellen auf mündliche Noten um)."
+            },
+            {
+              "level": 2,
+              "description": "Mindestens die besonders betroffenen Fachschaften haben ihre Leistungsnachweise systematisch gesichtet und erste Anpassungen beschlossen (z. B. Verlagerung in beaufsichtigte Settings, Prozessdokumentation)."
+            },
+            {
+              "level": 3,
+              "description": "Die Schule hat eine dokumentierte Linie, welche Leistungsnachweise KI-frei und welche KI-offen sind, und überprüft diese Zuordnung regelmäßig."
+            }
+          ]
+        },
+        {
+          "id": "d3-i2",
+          "text": "Transparente Regeln für KI in Leistungsnachweisen",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Schüler:innen wissen nicht, ob und wie sie KI bei Leistungsnachweisen nutzen dürfen. Erlaubt ist, was nicht auffällt."
+            },
+            {
+              "level": 1,
+              "description": "Einzelne Lehrkräfte formulieren eigene Regeln je Aufgabe; zwischen Fächern und Lehrkräften bestehen Widersprüche."
+            },
+            {
+              "level": 2,
+              "description": "Es gibt schulweite, den Schüler:innen bekannte Regeln für KI in Leistungsnachweisen (erlaubte Nutzung, Kennzeichnung, Konsequenzen), die in den meisten Fächern angewendet werden."
+            },
+            {
+              "level": 3,
+              "description": "Die Regeln sind durchgängig gelebte Praxis, auf Aufgabenblättern ausgewiesen (z. B. KI-Ampel je Leistungsnachweis) und werden mit Schüler:innen und Eltern regelmäßig kommuniziert und weiterentwickelt."
+            }
+          ]
+        },
+        {
+          "id": "d3-i3",
+          "text": "Bewertung von Prozess und Eigenleistung",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Bewertet wird ausschließlich das Endprodukt. Wie es entstanden ist und welchen Anteil KI daran hatte, spielt für die Bewertung keine Rolle."
+            },
+            {
+              "level": 1,
+              "description": "Einzelne Lehrkräfte beziehen Prozess oder Reflexion in die Bewertung ein, ohne abgestimmte Kriterien oder Instrumente."
+            },
+            {
+              "level": 2,
+              "description": "Für KI-offene Formate existieren abgestimmte Instrumente (z. B. Bewertungsraster mit Prozess- und Reflexionsanteilen), die in mehreren Fachschaften genutzt werden."
+            },
+            {
+              "level": 3,
+              "description": "Prozess- und eigenleistungsorientierte Bewertung ist schulweit etabliert; Kriterien sind den Schüler:innen vor Arbeitsbeginn bekannt und werden regelmäßig evaluiert."
+            }
+          ]
+        },
+        {
+          "id": "d3-i4",
+          "text": "Umgang mit Verdachtsfällen unerlaubter KI-Nutzung",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Es gibt kein vereinbartes Vorgehen. Verdachtsfälle werden je nach Lehrkraft ignoriert, sanktioniert oder eskalieren unstrukturiert; teilweise werden unzuverlässige KI-Detektoren genutzt."
+            },
+            {
+              "level": 1,
+              "description": "Das Problem wird diskutiert, aber das Vorgehen bleibt der Einzelnen überlassen. Schüler:innen erleben die Handhabung als unberechenbar."
+            },
+            {
+              "level": 2,
+              "description": "Es gibt ein vereinbartes, den Schüler:innen bekanntes Vorgehen (z. B. Fachgespräch zur Plausibilisierung der Eigenleistung statt Detektor-Beweisführung), das in der Regel eingehalten wird."
+            },
+            {
+              "level": 3,
+              "description": "Das Vorgehen ist etabliert, wird als fair erlebt und ist in eine Vertrauenskultur eingebettet: Prävention durch klare Aufgabenstellung und Offenlegungsmöglichkeiten hat Vorrang vor Kontrolle."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d4",
+      "title": "KI-Kompetenzen der Schüler:innen",
+      "leitfrage": "Lernen unsere Schüler:innen systematisch, KI kompetent, kritisch und selbstbestimmt zu nutzen?",
+      "items": [
+        {
+          "id": "d4-i1",
+          "text": "Systematischer Aufbau von KI-Grundverständnis",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Wie KI-Systeme funktionieren (Wahrscheinlichkeiten, Trainingsdaten, Halluzinationen), ist kein Unterrichtsgegenstand. Das Verständnis der Schüler:innen speist sich aus privater Nutzung und sozialen Medien."
+            },
+            {
+              "level": 1,
+              "description": "Grundlagen werden punktuell behandelt (z. B. im Informatikunterricht einer Jahrgangsstufe), erreichen aber nicht alle Schüler:innen."
+            },
+            {
+              "level": 2,
+              "description": "Es ist vereinbart, in welchen Fächern und Jahrgangsstufen KI-Grundverständnis aufgebaut wird; die meisten Schüler:innen durchlaufen diese Bausteine."
+            },
+            {
+              "level": 3,
+              "description": "Ein aufeinander aufbauendes Curriculum (Spiralprinzip über die Jahrgangsstufen) ist etabliert und wird regelmäßig an die technische Entwicklung angepasst."
+            }
+          ]
+        },
+        {
+          "id": "d4-i2",
+          "text": "Kritische Bewertung von KI-Ausgaben durch Schüler:innen",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Schüler:innen übernehmen KI-Ausgaben in der Regel ungeprüft. Strategien zur Überprüfung (Quellencheck, Plausibilisierung) werden nicht vermittelt."
+            },
+            {
+              "level": 1,
+              "description": "Einzelne Lehrkräfte thematisieren Fehler und Verzerrungen von KI-Ausgaben, aber ohne systematische Übung."
+            },
+            {
+              "level": 2,
+              "description": "Das Prüfen von KI-Ausgaben wird in mehreren Fächern aktiv geübt (z. B. Faktencheck-Aufgaben, Fehlersuche in KI-Texten); Schüler:innen kennen Grundstrategien."
+            },
+            {
+              "level": 3,
+              "description": "Kritische Bewertung ist eingeübte Routine: Schüler:innen prüfen KI-Ausgaben selbstständig, können Verzerrungen benennen und tun dies erkennbar auch ohne Aufforderung."
+            }
+          ]
+        },
+        {
+          "id": "d4-i3",
+          "text": "Reflexion über Autorschaft, Eigenleistung und akademische Ehrlichkeit",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Fragen von Autorschaft und Eigenleistung beim KI-Einsatz werden nicht besprochen. Schüler:innen entwickeln ihre Maßstäbe allein."
+            },
+            {
+              "level": 1,
+              "description": "Das Thema kommt anlassbezogen vor (meist als Täuschungsvorwurf), aber nicht als eigenständiger Lerngegenstand."
+            },
+            {
+              "level": 2,
+              "description": "In mehreren Fächern wird explizit erarbeitet, was Eigenleistung beim Arbeiten mit KI bedeutet und wie KI-Beiträge gekennzeichnet werden; es gibt eingeführte Kennzeichnungskonventionen."
+            },
+            {
+              "level": 3,
+              "description": "Schüler:innen verfügen über ein belastbares, gemeinsam erarbeitetes Verständnis von Eigenleistung; sie legen KI-Nutzung selbstverständlich offen, weil Offenlegung nicht sanktioniert, sondern als Kompetenz gewertet wird."
+            }
+          ]
+        },
+        {
+          "id": "d4-i4",
+          "text": "Gesellschaftliche und ethische Dimensionen von KI im Unterricht",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Gesellschaftliche Folgen von KI (Arbeitswelt, Desinformation, Datenschutz, Umweltkosten, Machtkonzentration) sind kein Unterrichtsthema."
+            },
+            {
+              "level": 1,
+              "description": "Einzelne Lehrkräfte greifen das Thema nach Aktualitätslage auf (z. B. ein Zeitungsartikel), ohne curriculare Verankerung."
+            },
+            {
+              "level": 2,
+              "description": "Gesellschaftliche und ethische KI-Fragen sind in mehreren Fächern verankert (z. B. Deutsch, Ethik/Religion, Sozialkunde) und werden kontrovers und altersangemessen behandelt."
+            },
+            {
+              "level": 3,
+              "description": "Die Schule ermöglicht vertiefte Auseinandersetzung über den Fachunterricht hinaus (z. B. Projekttage, Debattenformate, Beteiligung der SMV an Schulregeln) und verbindet sie mit der eigenen Schulpraxis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d5",
+      "title": "Professionalisierung des Kollegiums",
+      "leitfrage": "Bauen unsere Lehrkräfte systematisch eigene KI-Kompetenz auf — und erreicht das alle, nicht nur die Interessierten?",
+      "items": [
+        {
+          "id": "d5-i1",
+          "text": "Fortbildungsangebot und -beteiligung zu KI",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Es gab keine schulinterne Fortbildung zu KI. Wer sich fortbildet, tut es privat und auf eigene Initiative."
+            },
+            {
+              "level": 1,
+              "description": "Es gab vereinzelte Angebote (z. B. ein Vortrag), die vor allem die ohnehin Interessierten erreicht haben. Ein Plan, wie alle erreicht werden, fehlt."
+            },
+            {
+              "level": 2,
+              "description": "Es gibt ein gestuftes, wiederkehrendes Angebot (z. B. Basisschulung für alle, Vertiefungen nach Bedarf, Mikrofortbildungen), das einen Großteil des Kollegiums erreicht hat."
+            },
+            {
+              "level": 3,
+              "description": "Professionalisierung zu KI ist Teil des Fortbildungskonzepts der Schule, wird bedarfsorientiert geplant (z. B. auf Basis von Abfragen), und auch zurückhaltende Kolleg:innen werden gezielt und niedrigschwellig mitgenommen."
+            }
+          ]
+        },
+        {
+          "id": "d5-i2",
+          "text": "Eigene Anwendungskompetenz der Lehrkräfte",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Die meisten Lehrkräfte haben KI-Werkzeuge nie selbst ausprobiert oder nutzen sie ausschließlich privat, ohne Bezug zum Beruf."
+            },
+            {
+              "level": 1,
+              "description": "Eine kleine Gruppe nutzt KI versiert (z. B. zur Unterrichtsvorbereitung), die Mehrheit hat wenig oder keine eigene Erfahrung; die Schere im Kollegium geht auseinander."
+            },
+            {
+              "level": 2,
+              "description": "Die Mehrheit der Lehrkräfte hat KI-Werkzeuge für berufliche Zwecke erprobt (z. B. Materialerstellung, Differenzierung) und kann Möglichkeiten und Grenzen aus eigener Erfahrung einschätzen."
+            },
+            {
+              "level": 3,
+              "description": "Souveräne berufliche KI-Nutzung ist im Kollegium breit verankert; Lehrkräfte tauschen Arbeitstechniken aktiv aus und können ihre Nutzung gegenüber Schüler:innen und Eltern begründen."
+            }
+          ]
+        },
+        {
+          "id": "d5-i3",
+          "text": "Kollegiale Unterstützungsstrukturen",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Es gibt keine Ansprechpersonen und keine Formate für kollegiale Hilfe bei KI-Fragen. Jede:r ist auf sich gestellt."
+            },
+            {
+              "level": 1,
+              "description": "Hilfe organisiert sich informell: Wer die richtigen Kolleg:innen kennt, bekommt Unterstützung; andere nicht."
+            },
+            {
+              "level": 2,
+              "description": "Es gibt benannte Ansprechpersonen oder ein Tandem-/Mentorensystem für KI-Fragen, das bekannt ist und genutzt wird."
+            },
+            {
+              "level": 3,
+              "description": "Kollegiale Unterstützung ist strukturell verankert (z. B. feste Sprechzeiten, Mikrofortbildungs-Reihe, multiplikatorisch arbeitendes Team) und entlastet erkennbar auch die weniger technikaffinen Kolleg:innen."
+            }
+          ]
+        },
+        {
+          "id": "d5-i4",
+          "text": "Zeit und Anerkennung für Professionalisierung",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Auseinandersetzung mit KI findet ausschließlich in der Freizeit engagierter Einzelner statt. Es gibt weder Zeitfenster noch Anerkennung."
+            },
+            {
+              "level": 1,
+              "description": "Vereinzelt wird Konferenzzeit für das Thema verwendet; wer sich engagiert, tut es weiterhin zusätzlich und unbeachtet."
+            },
+            {
+              "level": 2,
+              "description": "Die Schulleitung schafft erkennbar Räume (z. B. pädagogische Tage, Konferenzanteile, Entlastung für Multiplikator:innen) für die Auseinandersetzung mit KI."
+            },
+            {
+              "level": 3,
+              "description": "Zeit für Professionalisierung ist fest eingeplant und mit Prioritäten verbunden: Wenn KI-Schulentwicklung Zeit bekommt, wird anderes sichtbar zurückgestellt (De-Implementierung statt Draufsatteln)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d6",
+      "title": "Steuerung & Schulentwicklung",
+      "leitfrage": "Gibt es bei uns Strukturen, die das Thema KI verbindlich steuern — oder hängt alles an engagierten Einzelpersonen?",
+      "items": [
+        {
+          "id": "d6-i1",
+          "text": "Verantwortungsstruktur für das Thema KI",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Niemand ist erkennbar zuständig. Das Thema taucht auf, wenn Probleme entstehen, und verschwindet wieder."
+            },
+            {
+              "level": 1,
+              "description": "Eine engagierte Einzelperson (z. B. Systembetreuung, einzelne Lehrkraft) treibt das Thema — ohne Mandat, ohne Vertretung, ohne Absicherung durch die Schulleitung."
+            },
+            {
+              "level": 2,
+              "description": "Es gibt eine beauftragte Gruppe (z. B. Steuergruppe, Arbeitsgruppe Digitalisierung) mit klarem Auftrag der Schulleitung; Zuständigkeiten sind benannt und im Kollegium bekannt."
+            },
+            {
+              "level": 3,
+              "description": "Die Steuerungsstruktur arbeitet kontinuierlich, ist personell auf mehrere Schultern verteilt (kein Single Point of Failure), berichtet regelmäßig in Konferenzen und hat definierte Entscheidungswege."
+            }
+          ]
+        },
+        {
+          "id": "d6-i2",
+          "text": "Verbindlichkeit von Beschlüssen und Vereinbarungen",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Es gibt keine Beschlüsse zu KI. Vereinbarungen, sofern vorhanden, sind unverbindliche Absichtserklärungen."
+            },
+            {
+              "level": 1,
+              "description": "Es gibt einzelne Beschlüsse, aber niemand verfolgt ihre Umsetzung; nach einigen Monaten weiß kaum jemand mehr davon."
+            },
+            {
+              "level": 2,
+              "description": "Beschlüsse zu KI durchlaufen die zuständigen Gremien (Lehrerkonferenz, Schulforum/Schulkonferenz), sind dokumentiert und auffindbar; die Umsetzung wird zumindest punktuell nachgehalten."
+            },
+            {
+              "level": 3,
+              "description": "Es gibt einen funktionierenden Zyklus: Beschlüsse haben benannte Verantwortliche und Termine, die Umsetzung wird überprüft, und Vereinbarungen werden auf dieser Basis fortgeschrieben oder zurückgenommen."
+            }
+          ]
+        },
+        {
+          "id": "d6-i3",
+          "text": "Verankerung im Schulentwicklungsprogramm",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "KI kommt im Schulentwicklungsprogramm (bzw. den Entwicklungszielen der Schule) nicht vor und konkurriert unkoordiniert mit allen anderen Themen."
+            },
+            {
+              "level": 1,
+              "description": "KI wird als Thema erwähnt, aber ohne Ziele, Maßnahmen oder Ressourcenzuordnung — ein Bekenntnis ohne Konsequenz."
+            },
+            {
+              "level": 2,
+              "description": "KI ist mit konkreten, terminierten Zielen im Schulentwicklungsprogramm verankert und mit anderen Entwicklungsvorhaben abgestimmt (Prioritäten statt Addition)."
+            },
+            {
+              "level": 3,
+              "description": "Die KI-bezogenen Entwicklungsziele werden regelmäßig evaluiert und fortgeschrieben; die Schule kann zeigen, welche Vorhaben sie zugunsten dieser Ziele bewusst nicht verfolgt (De-Implementierung)."
+            }
+          ]
+        },
+        {
+          "id": "d6-i4",
+          "text": "Evaluation und Wirkungsüberprüfung",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Ob Maßnahmen rund um KI etwas bewirken, wird nicht überprüft. Entschieden wird nach Eindruck und Lautstärke."
+            },
+            {
+              "level": 1,
+              "description": "Rückmeldungen werden gelegentlich informell eingeholt (z. B. Stimmungsbild in der Konferenz), aber nicht systematisch erhoben oder dokumentiert."
+            },
+            {
+              "level": 2,
+              "description": "Zentrale Maßnahmen werden mit einfachen Instrumenten evaluiert (z. B. kurze Befragungen von Kollegium oder Schüler:innen); Ergebnisse fließen in die weitere Planung ein."
+            },
+            {
+              "level": 3,
+              "description": "Es gibt einen vereinbarten Evaluationsrhythmus mit klaren Fragen (Was wollten wir erreichen? Woran erkennen wir es?); auch das Beenden wirkungsloser Maßnahmen ist akzeptierte Praxis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d7",
+      "title": "Technik, Recht & Datenschutz",
+      "leitfrage": "Haben alle an unserer Schule rechtssicheren, gerechten Zugang zu geeigneten KI-Werkzeugen?",
+      "items": [
+        {
+          "id": "d7-i1",
+          "text": "Zugang zu datenschutzkonformen KI-Werkzeugen",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Die Schule stellt keine KI-Werkzeuge bereit. Wer KI nutzt, verwendet private Konten — auch im Unterricht."
+            },
+            {
+              "level": 1,
+              "description": "Es gibt erste Zugänge (z. B. über Landeslösungen oder Testlizenzen), aber nur für einzelne Lehrkräfte oder Klassen; die Auswahl ist zufällig entstanden."
+            },
+            {
+              "level": 2,
+              "description": "Lehrkräfte und relevante Jahrgangsstufen haben Zugang zu mindestens einem datenschutzkonform nutzbaren KI-Werkzeug; die Auswahl ist begründet und dokumentiert."
+            },
+            {
+              "level": 3,
+              "description": "Der Zugang ist verlässlich, in Unterrichts- und Arbeitsabläufe integriert und wird regelmäßig überprüft (Eignung, Kosten, Datenschutz); Beschaffungsentscheidungen folgen pädagogischen Kriterien."
+            }
+          ]
+        },
+        {
+          "id": "d7-i2",
+          "text": "Datenschutz-Praxis im Umgang mit KI",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Personenbezogene Daten (z. B. Schülertexte mit Namen, Zeugnisformulierungen) werden ungeprüft in frei verfügbare KI-Dienste eingegeben — aus Unwissen, nicht aus Absicht."
+            },
+            {
+              "level": 1,
+              "description": "Einzelne kennen die Regeln, eine verlässliche gemeinsame Praxis fehlt; Hinweise existieren, werden aber nicht systematisch vermittelt."
+            },
+            {
+              "level": 2,
+              "description": "Die zentralen Datenschutzregeln (keine personenbezogenen Daten in offene Dienste, Anonymisierung, erlaubte Werkzeuge) sind allen vermittelt und werden überwiegend eingehalten."
+            },
+            {
+              "level": 3,
+              "description": "Datenschutzbewusste KI-Nutzung ist Routine; neue Werkzeuge werden vor dem Einsatz geprüft (ggf. mit dem Datenschutzbeauftragten), und Zweifelsfälle werden aktiv geklärt statt umgangen."
+            }
+          ]
+        },
+        {
+          "id": "d7-i3",
+          "text": "Chancengerechtigkeit beim Zugang",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Ob Schüler:innen KI nutzen können, hängt vollständig vom Elternhaus ab (Geräte, Bezahl-Abos, Unterstützung). Die Schule gleicht nichts aus."
+            },
+            {
+              "level": 1,
+              "description": "Das Gerechtigkeitsproblem ist erkannt und wird benannt, aber es gibt keine konkreten Ausgleichsmaßnahmen."
+            },
+            {
+              "level": 2,
+              "description": "Die Schule gleicht aktiv aus: schulische Zugänge für alle relevanten Lerngruppen, Nutzungsmöglichkeiten in der Schule (z. B. offene Lernzeiten, Geräteausleihe)."
+            },
+            {
+              "level": 3,
+              "description": "Chancengerechtigkeit ist ein geprüftes Kriterium bei allen KI-Entscheidungen (Aufgabenstellung, Beschaffung, Prüfungsformate); KI-bezogene Anforderungen setzen niemals private Bezahl-Zugänge voraus."
+            }
+          ]
+        },
+        {
+          "id": "d7-i4",
+          "text": "Klarheit über rechtliche Rahmenbedingungen",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Rechtliche Fragen (Urheberrecht an Materialien, EU AI Act, Prüfungsrecht, Aufsichtspflichten) sind diffus; Entscheidungen werden aus Unsicherheit vertagt oder gar nicht getroffen."
+            },
+            {
+              "level": 1,
+              "description": "Einzelne haben sich kundig gemacht; verlässliche, schulweit geteilte Klarheit über die wichtigsten Rechtsfragen besteht nicht."
+            },
+            {
+              "level": 2,
+              "description": "Die für den Schulalltag wichtigsten Rechtsfragen sind geklärt und verständlich dokumentiert (z. B. in der Handreichung für Lehrkräfte); Quellen sind benannt (z. B. Kultusministerium, Landesdatenschutz)."
+            },
+            {
+              "level": 3,
+              "description": "Die Rechtslage wird laufend beobachtet (benannte Zuständigkeit), Änderungen werden zeitnah eingearbeitet und kommuniziert; bei offenen Rechtsfragen gibt es einen definierten Klärungsweg über Schulleitung und Schulaufsicht."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
