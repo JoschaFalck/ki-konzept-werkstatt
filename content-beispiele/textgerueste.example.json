@@ -1,0 +1,125 @@
+{
+  "$comment": "Mustervorlage für die Segment-Struktur des Konzept-Builders (Spezifikation 5.3). ENTWURF als Strukturbeispiel — fachliche Ausarbeitung durch Joscha Falck. Prinzip: Gerüste strukturieren, Leerstellen erzwingen schulspezifische Entscheidungen. hint-Segmente erscheinen nicht im Export.",
+  "contentVersion": "0.1-entwurf",
+  "sections": [
+    {
+      "id": "sec-pruefen",
+      "title": "Prüfen & Bewerten",
+      "leitfragen": [
+        "Welche unserer Prüfungsformate sind durch KI-Nutzung entwertet, welche nicht?",
+        "Wo erlauben wir KI in Leistungsnachweisen ausdrücklich, und wie machen wir Eigenleistung sichtbar?",
+        "Wie gehen wir mit Verdachtsfällen um, ohne eine Misstrauenskultur zu etablieren?"
+      ],
+      "templates": [
+        {
+          "id": "tpl-pruefen-a",
+          "label": "Variante A: Formate differenzieren (über/mit KI)",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Unsere Schule unterscheidet Leistungsnachweise danach, ob sie ohne KI-Unterstützung (KI-frei, unter Aufsicht) oder mit ausgewiesener KI-Unterstützung erbracht werden. KI-freie Formate setzen wir insbesondere ein für: "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Einsatzbereiche KI-freier Formate",
+              "placeholder": "z. B. Grundwissen, Schreibflüssigkeit, mündliche Formate — was genau an unserer Schule?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Für Formate mit KI-Unterstützung gilt: Schüler:innen legen die Nutzung offen, und die Eigenleistung wird sichtbar gemacht durch: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Sichtbarmachung der Eigenleistung",
+              "placeholder": "z. B. Prozessdokumentation, Reflexionsteil, Kolloquium — welche Form wählt unsere Schule verbindlich?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Die Bewertung KI-gestützter Leistungen erfolgt anhand transparenter Kriterien, die den Schüler:innen vor Beginn der Arbeit bekannt sind. Wir nutzen dafür: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Bewertungsinstrumente",
+              "placeholder": "z. B. schulweit abgestimmte Bewertungsraster je Fachschaft — welche, und wer pflegt sie?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "hint",
+              "value": "Vertiefung: Bewertungsraster-Builder und Leitfaden „Prüfen und Bewerten“ (Verlinkung über links.json, Kontext sec-pruefen)."
+            },
+            {
+              "type": "hint",
+              "value": "Beteiligung: Beschlussfassung in der Lehrerkonferenz empfohlen; Information von Schulforum/Schulkonferenz und Elternbeirat."
+            }
+          ]
+        },
+        {
+          "id": "tpl-pruefen-b",
+          "label": "Variante B: Schrittweise Erprobung (Pilotfächer)",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Unsere Schule entwickelt ihre Prüfungskultur schrittweise weiter. Im Schuljahr "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Zeitraum",
+              "placeholder": "z. B. 2026/27",
+              "required": true,
+              "multiline": false
+            },
+            {
+              "type": "text",
+              "value": " erproben folgende Fachschaften KI-bewusste Prüfungsformate: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Pilotfachschaften und Formate",
+              "placeholder": "Welche Fachschaften, welche Formate, in welchen Jahrgangsstufen?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Die Erprobung wird begleitet und ausgewertet. Verantwortlich für die Auswertung und den Transfer in die übrigen Fachschaften ist: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Verantwortung für Auswertung und Transfer",
+              "placeholder": "Funktionsbezeichnung, keine Namen — z. B. Steuergruppe Digitalisierung, Fachschaftsleitungen",
+              "required": true,
+              "multiline": false
+            },
+            {
+              "type": "text",
+              "value": "Bis zur Auswertung gilt für alle übrigen Leistungsnachweise folgende Übergangsregel: "
+            },
+            {
+              "type": "field",
+              "id": "f4",
+              "label": "Übergangsregel",
+              "placeholder": "Was gilt einstweilen schulweit? Diese Leerstelle bewusst nicht überspringen — ohne Übergangsregel entsteht ein Graubereich.",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "hint",
+              "value": "Variante B eignet sich für Kollegien mit großer Heterogenität in der Haltung (vgl. Diagnose d1-i4): Erprobung statt Vollbeschluss senkt Widerstände, braucht aber einen klaren Auswertungstermin."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

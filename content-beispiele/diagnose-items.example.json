@@ -1,0 +1,128 @@
+{
+  "$comment": "Mustervorlage für Formulierungsqualität. ENTWURF von Claude als Diskussionsgrundlage — fachliche Prüfung und Überarbeitung durch Joscha Falck erforderlich. Standard: Stufenbeschreibungen sind verhaltensnah, beobachtbar und in einer Steuergruppe diskutierbar. Keine abstrakten Labels.",
+  "contentVersion": "0.1-entwurf",
+  "dimensions": [
+    {
+      "id": "d1",
+      "title": "Haltung & Regeln",
+      "leitfrage": "Haben wir uns als Schule verständigt, wie wir zu KI stehen und was bei uns gilt?",
+      "items": [
+        {
+          "id": "d1-i1",
+          "text": "Verständigung im Kollegium über den Umgang mit KI",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "KI war noch nie Gegenstand einer Konferenz oder eines pädagogischen Tags. Der Umgang ist Privatsache der einzelnen Lehrkraft."
+            },
+            {
+              "level": 1,
+              "description": "Es gab vereinzelte Gespräche oder einen Input (z. B. in einer Konferenz), aber keine strukturierte Auseinandersetzung. Positionen im Kollegium sind unbekannt oder werden nur informell ausgetauscht."
+            },
+            {
+              "level": 2,
+              "description": "Das Kollegium hat sich in mindestens einem moderierten Format (pädagogischer Tag, Konferenzschwerpunkt, Arbeitsgruppe) strukturiert mit Chancen, Risiken und der eigenen Haltung auseinandergesetzt. Unterschiedliche Positionen sind sichtbar und benannt."
+            },
+            {
+              "level": 3,
+              "description": "Die Auseinandersetzung ist wiederkehrend verankert (z. B. jährlicher Reflexionstermin). Es gibt eine dokumentierte gemeinsame Grundposition, die auch Dissens transparent macht und neuen Kolleg:innen vermittelt wird."
+            }
+          ]
+        },
+        {
+          "id": "d1-i2",
+          "text": "Verbindliche Regeln für die KI-Nutzung durch Schüler:innen",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Es gibt keine Regeln. Jede Lehrkraft entscheidet situativ und unterschiedlich; Schüler:innen erleben widersprüchliche Erwartungen."
+            },
+            {
+              "level": 1,
+              "description": "Einzelne Lehrkräfte oder Fachschaften haben eigene Regeln formuliert. Eine schulweite Linie existiert nicht oder ist nicht allen bekannt."
+            },
+            {
+              "level": 2,
+              "description": "Es gibt schulweit beschlossene Regeln (z. B. zu erlaubter Nutzung, Kennzeichnung, Eigenleistung), die den Schüler:innen aktiv vermittelt wurden. Die Anwendung ist im Alltag noch uneinheitlich."
+            },
+            {
+              "level": 3,
+              "description": "Die Regeln werden im Unterricht durchgängig gelebt, sind in Leistungsnachweisen operationalisiert (z. B. Kennzeichnungspflicht) und werden regelmäßig mit Schüler:innen besprochen und überarbeitet."
+            }
+          ]
+        },
+        {
+          "id": "d1-i3",
+          "text": "Orientierung für Lehrkräfte bei der eigenen dienstlichen KI-Nutzung",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Lehrkräfte wissen nicht, was sie dienstlich nutzen dürfen (Datenschutz, erlaubte Werkzeuge, Grenzen z. B. bei der Korrektur). Nutzung findet im Graubereich statt oder unterbleibt aus Unsicherheit."
+            },
+            {
+              "level": 1,
+              "description": "Es kursieren informelle Hinweise (Flurfunk, einzelne E-Mails), aber keine verlässliche, auffindbare Orientierung."
+            },
+            {
+              "level": 2,
+              "description": "Es gibt eine schriftliche, allen zugängliche Handreichung (erlaubte Werkzeuge, No-Gos insbesondere bei Schülerdaten, Ansprechpersonen). Sie ist bekannt, wird aber nicht systematisch aktualisiert."
+            },
+            {
+              "level": 3,
+              "description": "Die Handreichung wird regelmäßig aktualisiert, ist Teil der Einarbeitung neuer Kolleg:innen, und es gibt eine benannte Anlaufstelle für Zweifelsfälle, die auch tatsächlich genutzt wird."
+            }
+          ]
+        },
+        {
+          "id": "d1-i4",
+          "text": "Umgang mit Unsicherheit und Kontroversen im Kollegium",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Sorgen, Ablehnung oder Überforderung einzelner Kolleg:innen haben keinen Ort. Das Thema wird vermieden oder polarisiert informell (Befürworter vs. Skeptiker)."
+            },
+            {
+              "level": 1,
+              "description": "Unsicherheiten werden gelegentlich angesprochen, aber es gibt kein Format, in dem skeptische Positionen ernsthaft bearbeitet werden. Skeptiker:innen ziehen sich zurück."
+            },
+            {
+              "level": 2,
+              "description": "Kritische Positionen haben einen anerkannten Platz (z. B. in Arbeitsgruppen, Konferenzen). Bedenken fließen erkennbar in Entscheidungen ein, statt überstimmt zu werden."
+            },
+            {
+              "level": 3,
+              "description": "Die Schule nutzt Kontroversen produktiv: Skeptische Kolleg:innen übernehmen sichtbare Rollen (z. B. kritische Begleitung von Erprobungen), und Entscheidungen dokumentieren, welche Einwände wie berücksichtigt wurden."
+            }
+          ]
+        },
+        {
+          "id": "d1-i5",
+          "text": "Einbezug von Schüler:innen und Eltern in die Verständigung",
+          "deprecated": false,
+          "levels": [
+            {
+              "level": 0,
+              "description": "Schüler:innen und Eltern erfahren von Regeln und Haltung der Schule höchstens beiläufig. Es gibt keine Information und keine Beteiligung."
+            },
+            {
+              "level": 1,
+              "description": "Es gab punktuelle Information (z. B. ein Elternbrief, eine Erwähnung im Schulforum), aber keinen Dialog und keine Mitwirkung."
+            },
+            {
+              "level": 2,
+              "description": "Schüler:innen (z. B. über die SMV) und Eltern (z. B. über den Elternbeirat) wurden zu den Regeln gehört; ihre Rückmeldungen sind dokumentiert und mindestens teilweise eingeflossen."
+            },
+            {
+              "level": 3,
+              "description": "Beteiligung ist strukturell verankert: Schüler:innen- und Elternvertretungen wirken an der Fortschreibung der Regeln mit, und die Schule kommuniziert Haltung und Regeln aktiv und wiederkehrend (z. B. Jahrgangsstufen-Einführung, Elternabende)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
