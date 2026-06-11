@@ -16,7 +16,7 @@ export function RadarChart({ data }: RadarChartProps) {
     <div
       role="img"
       aria-label={ui.auswertung.radarLabel.replace('{werte}', werte)}
-      className="mx-auto w-full max-w-xl [&_svg]:h-auto [&_svg]:w-full"
+      className="radar-animiert mx-auto w-full max-w-xl [&_svg]:h-auto [&_svg]:w-full"
       dangerouslySetInnerHTML={{ __html: radarSvg(data) }}
     />
   );

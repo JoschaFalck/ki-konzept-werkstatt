@@ -23,7 +23,7 @@ export function Modal({ open, title, children, onClose }: ModalProps) {
       onClose={onClose}
       onCancel={onClose}
       aria-label={title}
-      className="w-full max-w-lg rounded-karte bg-karte p-6 text-text shadow-sm backdrop:bg-text/40"
+      className="w-full max-w-lg rounded-karte bg-karte p-6 text-text shadow-schwebend-lg backdrop:bg-tinte/50 backdrop:backdrop-blur-sm"
     >
       {open && (
         <>

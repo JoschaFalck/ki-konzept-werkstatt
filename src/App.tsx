@@ -55,9 +55,15 @@ function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="border-b border-sekundaer/15 bg-karte print-hidden">
+      <header className="print-hidden sticky top-0 z-20 border-b border-sekundaer/10 bg-flaeche/85 backdrop-blur">
         <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-4 py-3">
-          <Link to="/" className="font-semibold text-primaer">
+          <Link to="/" className="flex items-center gap-2 font-semibold text-primaer">
+            <span
+              aria-hidden
+              className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-aurora-hero text-xs font-bold text-white"
+            >
+              KI
+            </span>
             {ui.app.titel}
           </Link>
           <SaveIndicator />
@@ -67,14 +73,14 @@ function Layout() {
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
         <Outlet />
       </main>
-      <footer className="border-t border-sekundaer/15 bg-karte print-hidden">
-        <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-2 px-4 py-4 text-sm text-sekundaer">
+      <footer className="print-hidden bg-tinte text-white/80">
+        <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-2 px-4 py-6 text-sm">
           <span>{ui.app.footerFamilie}</span>
           <span className="flex flex-wrap gap-4">
-            <Link to="/hinweise" className="underline hover:text-text">
+            <Link to="/hinweise" className="underline hover:text-white">
               {ui.hinweise.titel}
             </Link>
-            <Link to="/herleitung" className="underline hover:text-text">
+            <Link to="/herleitung" className="underline hover:text-white">
               {ui.herleitung.titel}
             </Link>
             <span>{ui.app.footerLizenz}</span>

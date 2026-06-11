@@ -14,11 +14,104 @@
     outline: 2px solid #0f6b6b;
     outline-offset: 2px;
   }
+  .bg-aurora-hero :focus-visible {
+    outline-color: #fac775;
+  }
+}
+
+/* Bewegung (Spezifikation Abschnitt 6, Aurora): Einschweben, Schweben, Radar.
+   Alles respektiert prefers-reduced-motion. */
+@layer utilities {
+  .anim-auf {
+    opacity: 0;
+    animation: kkw-auftauchen 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .anim-auf-1 {
+    animation-delay: 0.08s;
+  }
+  .anim-auf-2 {
+    animation-delay: 0.16s;
+  }
+  .anim-auf-3 {
+    animation-delay: 0.24s;
+  }
+  .anim-auf-4 {
+    animation-delay: 0.32s;
+  }
+  .anim-schweben {
+    animation: kkw-schweben 9s ease-in-out infinite;
+  }
+  .anim-schweben-2 {
+    animation: kkw-schweben 12s ease-in-out infinite reverse;
+  }
+  .hover-lift {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(4, 52, 44, 0.16);
+  }
+}
+
+@keyframes kkw-auftauchen {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes kkw-schweben {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -14px);
+  }
+}
+
+@keyframes kkw-radar-flaeche {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.radar-animiert .radar-wert {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: kkw-radar-flaeche 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-auf,
+  .anim-schweben,
+  .anim-schweben-2,
+  .radar-animiert .radar-wert {
+    animation: none !important;
+    opacity: 1;
+  }
+  .hover-lift,
+  .hover-lift:hover {
+    transition: none;
+    transform: none;
+  }
 }
 
 /* Print-Regeln (Spezifikation Abschnitt 6): Auswertung, Maßnahmenübersicht,
    Prozessmaterialien. Navigation und Buttons ausblenden, Umbrüche vor
-   Hauptüberschriften, Diskussionskarten als 2×3-Raster mit Schnittlinien. */
+   Hauptüberschriften, Diskussionskarten als 2×3-Raster mit Schnittlinien.
+   Im Druck: keine Animationen, keine Verläufe, keine Schatten. */
 @media print {
   body {
     background: #ffffff;
@@ -32,6 +125,14 @@
   h1,
   h2 {
     break-after: avoid;
+  }
+  .anim-auf,
+  .radar-animiert .radar-wert {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  * {
+    box-shadow: none !important;
   }
   .print-karten {
     display: grid !important;

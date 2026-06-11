@@ -41,6 +41,8 @@ export function radarSvg(data: RadarDatum[]): string {
 
   parts.push(
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SIZE} ${SIZE}" width="${SIZE}" height="${SIZE}">`,
+    // Aurora-Verlauf (Spezifikation Abschnitt 6): Petrol → Himmel
+    `<defs><linearGradient id="kkw-radar-verlauf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0F6B6B"/><stop offset="1" stop-color="#378ADD"/></linearGradient></defs>`,
     `<rect width="${SIZE}" height="${SIZE}" fill="#FFFFFF"/>`,
   );
 
@@ -87,15 +89,19 @@ export function radarSvg(data: RadarDatum[]): string {
   const valuePoints = data
     .map((d, i) => (d.mean === null ? null : point(i, n, d.mean)))
     .filter((p): p is [number, number] => p !== null);
+  parts.push('<g class="radar-wert">');
   if (valuePoints.length >= 3) {
     const pts = valuePoints.map((p) => p.map((v) => v.toFixed(1)).join(',')).join(' ');
     parts.push(
-      `<polygon points="${pts}" fill="#0F6B6B" fill-opacity="0.18" stroke="#0F6B6B" stroke-width="3"/>`,
+      `<polygon points="${pts}" fill="url(#kkw-radar-verlauf)" fill-opacity="0.30" stroke="url(#kkw-radar-verlauf)" stroke-width="3.5"/>`,
     );
   }
   for (const [x, y] of valuePoints) {
-    parts.push(`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="6" fill="#0F6B6B"/>`);
+    parts.push(
+      `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="7" fill="#0F6B6B" stroke="#FFFFFF" stroke-width="2.5"/>`,
+    );
   }
+  parts.push('</g>');
 
   parts.push('</svg>');
   return parts.join('');

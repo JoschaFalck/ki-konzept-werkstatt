@@ -1,5 +1,5 @@
 /**
- * Design-Tokens gemäß Spezifikation Abschnitt 6 — verbindlich.
+ * Design-Tokens gemäß Spezifikation Abschnitt 6, Fassung „Aurora" — verbindlich.
  * Keine Inline-Hexwerte im Code; ausschließlich diese Token-Klassen.
  */
 /** @type {import('tailwindcss').Config} */
@@ -13,6 +13,10 @@ export default {
         text: '#1F2933',
         sekundaer: '#52606D',
         primaer: { DEFAULT: '#0F6B6B', hover: '#0C5757' },
+        tinte: '#04342C',
+        himmel: '#378ADD',
+        aurora: '#185FA5',
+        bernstein: { DEFAULT: '#FAC775', text: '#412402' },
         akzent: '#B7791F',
         fehler: '#B3261E',
         erfolg: '#2F6B3F',
@@ -28,7 +32,15 @@ export default {
       },
       borderRadius: {
         DEFAULT: '8px',
-        karte: '12px',
+        karte: '16px',
+      },
+      boxShadow: {
+        schwebend: '0 6px 18px rgba(4, 52, 44, 0.10)',
+        'schwebend-lg': '0 14px 36px rgba(4, 52, 44, 0.16)',
+      },
+      backgroundImage: {
+        'aurora-hero': 'linear-gradient(120deg, #04342C 0%, #0F6B6B 55%, #185FA5 100%)',
+        'aurora-balken': 'linear-gradient(90deg, #0F6B6B 0%, #378ADD 100%)',
       },
       fontFamily: {
         sans: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],

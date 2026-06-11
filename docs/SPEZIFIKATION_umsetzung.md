@@ -181,17 +181,23 @@ Gerüste sind **strukturierte Segmente**, niemals Fließtext mit `[___]`-Magie:
 
 ---
 
-## 6. Design-System (Tokens und Charakter)
+## 6. Design-System (Tokens und Charakter) — Fassung „Aurora" (Juni 2026)
 
-**Charakter:** ruhig, professionell, „Verwaltungs-tauglich ohne Verwaltungs-Tristesse". Kein Tech-Demo-Look, keine Verläufe, keine Emojis im UI. Großzügiger Weißraum, klare Hierarchie. Das Tool muss auf einem Beamer in einem hellen Lehrerzimmer funktionieren.
+**Charakter (vom Autor überarbeitet; ersetzt die ursprüngliche nüchterne Fassung):** modern und sichtbar gestaltet, ohne die Seriosität für Gremien zu verlieren. Dunkler Verlaufs-Hero (Petrol → Blau) auf der Startseite, schwebende Karten mit weichen Schatten, Verläufe in Diagrammen und Fortschrittsbalken, dezente Bewegung (Einschweben, Hover-Lift, zählende Zahlen). Innenseiten bleiben hell und ruhig; Workshop-Modus und Druckansichten bleiben hell, kontrastreich und animationsfrei. Keine Emojis im UI.
 
 **Tokens (in tailwind.config hinterlegen):**
 - Grundfläche `#FAFAF7` (warmes Off-White), Karten `#FFFFFF`, Text `#1F2933`, Sekundärtext `#52606D`.
 - Primärfarbe (Aktionen, aktive Stufe): tiefes Petrol `#0F6B6B`; Hover `#0C5757`.
-- Akzent sparsam: Bernstein `#B7791F` ausschließlich für Hinweise/Irritation; Fehler `#B3261E`; Erfolg dezent `#2F6B3F`.
-- Dimensionsfarben (nur für kleine Marker/Chips, nicht für Flächen): 7 gedeckte, unterscheidbare Töne — d1 `#0F6B6B`, d2 `#3B5BA5`, d3 `#7B4FA3`, d4 `#A04668`, d5 `#B7791F`, d6 `#4E7A4E`, d7 `#5C6B73`.
-- Radien 8 px (Karten 12 px), Schatten max. eine Stufe (`shadow-sm`), Spacing-Raster 4 px.
+- Aurora-Töne: Tinte `#04342C` (dunkle Flächen, Footer, Hero-Basis), Himmel `#378ADD` (Verlaufs-Endpunkt für Balken/Diagramme), Aurora-Blau `#185FA5` (Hero-Verlauf), Bernstein-Hell `#FAC775` (CTA auf dunklen Flächen, Textfarbe dazu `#412402`).
+- Verlauf „Aurora": `linear-gradient(120deg, #04342C 0%, #0F6B6B 55%, #185FA5 100%)` für Hero und dunkle Akzentflächen; Balken-/Diagrammverlauf Petrol → Himmel.
+- Akzent: Bernstein `#B7791F` für Hinweise/Irritation; Fehler `#B3261E`; Erfolg dezent `#2F6B3F`.
+- Dimensionsfarben (Marker/Chips): d1 `#0F6B6B`, d2 `#3B5BA5`, d3 `#7B4FA3`, d4 `#A04668`, d5 `#B7791F`, d6 `#4E7A4E`, d7 `#5C6B73`.
+- Radien 8 px, Karten 16 px, Buttons als Pillen (`rounded-full`); Schatten: `schwebend` (0 6px 18px rgba(4,52,44,0.10)), Hover `schwebend-lg` (0 14px 36px rgba(4,52,44,0.16)).
 - Typo-Skala: 15 px Grundgröße, Überschriften 1.25-Faktor, max. Zeilenlänge Prosa ~70 Zeichen (`max-w-prose`).
+
+**Bewegung (verbindlich):** Einschweben von Abschnitten beim Laden (Opazität + 12 px Translation, ~0,5 s, gestaffelt), Hover-Lift auf interaktiven Karten, Radar zeichnet sich beim Öffnen, Mittelwerte zählen hoch. Alle Animationen respektieren `prefers-reduced-motion: reduce` (dann sofortige Endzustände). Keine Animationen in Druckansichten und im Workshop-Modus.
+
+**Bilder:** Illustrationen (flacher Editorial-Stil, Palette wie oben, keine Schrift im Bild) liegen unter `/src/assets/bilder/` und werden über `lib/bilder.ts` (import.meta.glob) eingebunden; fehlt eine Datei, rendert die Komponente einen gestalteten Fallback — nie ein Broken-Image. Dekorative Bilder erhalten leeres `alt`.
 
 **Komponenteninventar (genau diese bauen, Varianten nur nach Rückfrage):** Button (primary/secondary/ghost/danger), Card, StufenKarte (Radio-Card mit ausführlicher Beschreibung), ProgressBar, Banner (info/warn/error, schließbar wo sinnvoll), Modal (Bestätigungen), TextField/TextArea (mit Zeichenzähler ab 80 % des Limits), Select, Tabs, LinkCard („Vertiefung"), EmptyState, PrintButton, SaveIndicator.
 

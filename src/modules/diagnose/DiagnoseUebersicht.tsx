@@ -52,7 +52,7 @@ export function DiagnoseUebersicht() {
           const { done, total } = dimensionProgress(dim, project);
           return (
             <Link key={dim.id} to={`/p/${project.id}/diagnose/${dim.id}`} className="group">
-              <Card className="h-full transition-colors group-hover:ring-1 group-hover:ring-primaer">
+              <Card interaktiv className="h-full">
                 <div className="flex items-center gap-2">
                   <span
                     aria-hidden

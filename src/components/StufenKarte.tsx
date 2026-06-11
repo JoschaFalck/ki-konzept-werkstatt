@@ -22,10 +22,10 @@ export function StufenAuswahl({ item, value, onChange, large = false }: StufenAu
           return (
             <label
               key={level.level}
-              className={`flex cursor-pointer items-start gap-3 rounded-karte border bg-karte p-4 shadow-sm transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-primaer ${
+              className={`hover-lift flex cursor-pointer items-start gap-3 rounded-karte bg-karte p-4 transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-primaer ${
                 checked
-                  ? 'border-primaer ring-1 ring-primaer'
-                  : 'border-sekundaer/20 hover:border-sekundaer/50'
+                  ? 'bg-primaer/5 shadow-schwebend ring-2 ring-primaer'
+                  : 'shadow-schwebend ring-1 ring-transparent hover:ring-primaer/30'
               }`}
             >
               <input
@@ -37,7 +37,17 @@ export function StufenAuswahl({ item, value, onChange, large = false }: StufenAu
                 className="mt-1 h-4 w-4 shrink-0 accent-primaer"
               />
               <span>
-                <span className={`font-semibold ${checked ? 'text-primaer' : 'text-text'}`}>
+                <span
+                  className={`inline-flex items-center gap-2 font-semibold ${checked ? 'text-primaer' : 'text-text'}`}
+                >
+                  <span
+                    className={`inline-flex h-6 w-6 items-center justify-center rounded-full text-xs ${
+                      checked ? 'bg-aurora-balken text-white' : 'bg-primaer/10 text-primaer'
+                    }`}
+                    aria-hidden
+                  >
+                    {level.level}
+                  </span>
                   Stufe {level.level}
                 </span>
                 <span className={`mt-1 block text-sekundaer ${large ? 'text-base' : 'text-sm'}`}>

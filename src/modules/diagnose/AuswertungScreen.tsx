@@ -7,6 +7,7 @@ import { EmptyState } from '../../components/EmptyState';
 import { LinkCard } from '../../components/LinkCard';
 import { PrintButton } from '../../components/PrintButton';
 import { RadarChart } from '../../components/RadarChart';
+import { ZahlAnimation } from '../../components/ZahlAnimation';
 import { computeAuswertung } from '../../lib/auswertung';
 import { diagnoseContent, DIM_CHIP_CLASSES, hebelContent, linksContent } from '../../lib/content';
 import { useAppStore } from '../../store';
@@ -104,10 +105,10 @@ export function AuswertungScreen() {
       )}
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <Card>
+        <Card className="anim-auf anim-auf-1">
           <RadarChart data={radarData} />
         </Card>
-        <Card>
+        <Card className="anim-auf anim-auf-2">
           <h2 className="text-lg font-semibold">{ui.auswertung.mittelwerte}</h2>
           <table className="mt-3 w-full text-left">
             <thead>
@@ -135,10 +136,12 @@ export function AuswertungScreen() {
                       />
                       {d.title}
                     </td>
-                    <td className="py-2 tabular-nums">
-                      {mean === null
-                        ? ui.auswertung.nichtVollstaendig
-                        : mean.toFixed(2).replace('.', ',')}
+                    <td className="py-2 font-medium tabular-nums">
+                      {mean === null ? (
+                        ui.auswertung.nichtVollstaendig
+                      ) : (
+                        <ZahlAnimation wert={mean} />
+                      )}
                     </td>
                   </tr>
                 );
@@ -149,10 +152,12 @@ export function AuswertungScreen() {
       </div>
 
       {auswertung.hauptRegel && (
-        <HebelBox
-          haupt={hebelContent.regeln[auswertung.hauptRegel]}
-          zusatz={auswertung.zusatzRegeln.map((r) => hebelContent.regeln[r])}
-        />
+        <div className="anim-auf anim-auf-3">
+          <HebelBox
+            haupt={hebelContent.regeln[auswertung.hauptRegel]}
+            zusatz={auswertung.zusatzRegeln.map((r) => hebelContent.regeln[r])}
+          />
+        </div>
       )}
 
       <div className="grid gap-4 md:grid-cols-2">

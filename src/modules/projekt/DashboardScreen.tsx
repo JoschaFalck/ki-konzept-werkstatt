@@ -7,6 +7,7 @@ import { Modal } from '../../components/Modal';
 import { StatusBadge, type ModuleStatus } from '../../components/StatusBadge';
 import { TextField } from '../../components/TextField';
 import { isDiagnosisComplete } from '../../lib/auswertung';
+import { bild } from '../../lib/bilder';
 import { diagnoseContent, textgeruesteContent } from '../../lib/content';
 import { builderModuleStatus } from '../../lib/exportGate';
 import { exportFilename, serializeProject } from '../../lib/persistence';
@@ -33,6 +34,66 @@ function diagnoseStatus(project: Project): ModuleStatus {
   return anyAnswered ? 'in-progress' : 'none';
 }
 
+function ModulMotiv({ name }: { name: string }) {
+  const bildUrl = bild(`modul-${name}`);
+  if (bildUrl) {
+    return <img src={bildUrl} alt="" className="h-28 w-full rounded-t-karte object-cover" />;
+  }
+  const glyphs: Record<string, React.ReactNode> = {
+    diagnose: (
+      <polygon
+        points="22,6 38,14 35,32 9,32 6,14"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+    ),
+    referenz: (
+      <path
+        d="M8 8 H22 V32 H8 Z M22 8 H36 V32 H22"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+    ),
+    builder: (
+      <path
+        d="M10 8 H34 V32 H10 Z M15 15 H29 M15 21 H29 M15 27 H23"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+    ),
+    massnahmen: (
+      <path
+        d="M8 8 H20 V20 H8 Z M24 8 H36 V20 H24 Z M8 24 H20 V36 H8 Z M24 24 H36 V36 H24 Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+      />
+    ),
+    prozess: (
+      <path
+        d="M7 12 H27 V34 H7 Z M14 8 H34 V30"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+    ),
+  };
+  return (
+    <div className="flex h-28 items-center justify-center rounded-t-karte bg-aurora-hero text-bernstein">
+      <svg viewBox="0 0 44 40" width="56" height="51" aria-hidden="true">
+        {glyphs[name]}
+      </svg>
+    </div>
+  );
+}
+
 export function DashboardScreen() {
   const { id } = useParams<{ id: string }>();
   const project = useAppStore((s) => (id ? s.projects[id] : undefined));
@@ -54,7 +115,7 @@ export function DashboardScreen() {
     to: string;
     titel: string;
     text: string;
-    status: ModuleStatus;
+    status: ModuleStatus | null;
   }[] = [
     {
       key: 'diagnose',
@@ -68,7 +129,7 @@ export function DashboardScreen() {
       to: `/p/${project.id}/referenz`,
       titel: ui.dashboard.module.referenz.titel,
       text: ui.dashboard.module.referenz.text,
-      status: 'none',
+      status: null,
     },
     {
       key: 'builder',
@@ -89,13 +150,13 @@ export function DashboardScreen() {
       to: `/p/${project.id}/prozess`,
       titel: ui.dashboard.module.prozess.titel,
       text: ui.dashboard.module.prozess.text,
-      status: 'none',
+      status: null,
     },
   ];
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-center justify-between gap-3">
+      <div className="anim-auf flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-semibold">{project.title}</h1>
           <button
@@ -120,24 +181,29 @@ export function DashboardScreen() {
         </Button>
       </div>
 
-      <p className="max-w-prose text-sm text-sekundaer">{ui.dashboard.geraetebindung}</p>
+      <p className="anim-auf anim-auf-1 max-w-prose text-sm text-sekundaer">
+        {ui.dashboard.geraetebindung}
+      </p>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        {moduleCards.map((mod) => (
-          <Card key={mod.key} className="flex flex-col">
-            <div className="flex items-start justify-between gap-3">
-              <h2 className="text-lg font-semibold">{mod.titel}</h2>
-              {mod.key !== 'referenz' && mod.key !== 'prozess' && (
-                <StatusBadge status={mod.status} />
-              )}
-            </div>
-            <p className="mt-2 flex-1 text-sm text-sekundaer">{mod.text}</p>
-            <div className="mt-4">
-              <Link to={mod.to}>
-                <Button variant="secondary">{ui.start.projektOeffnen}</Button>
-              </Link>
-            </div>
-          </Card>
+      <div className="grid gap-5 md:grid-cols-2">
+        {moduleCards.map((mod, i) => (
+          <Link
+            key={mod.key}
+            to={mod.to}
+            className={`anim-auf anim-auf-${Math.min(i + 1, 4)} group`}
+          >
+            <Card interaktiv className="flex h-full flex-col overflow-hidden !p-0">
+              <ModulMotiv name={mod.key} />
+              <div className="flex flex-1 flex-col p-5">
+                <div className="flex items-start justify-between gap-3">
+                  <h2 className="text-lg font-semibold group-hover:text-primaer">{mod.titel}</h2>
+                  {mod.status !== null && <StatusBadge status={mod.status} />}
+                </div>
+                <p className="mt-2 flex-1 text-sm text-sekundaer">{mod.text}</p>
+                <p className="mt-4 text-sm font-medium text-primaer">{ui.start.projektOeffnen} →</p>
+              </div>
+            </Card>
+          </Link>
         ))}
       </div>
 

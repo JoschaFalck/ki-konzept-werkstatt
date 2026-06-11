@@ -10,13 +10,15 @@ const LABELS: Record<ModuleStatus, string> = {
 
 const CLASSES: Record<ModuleStatus, string> = {
   none: 'bg-flaeche text-sekundaer',
-  'in-progress': 'bg-flaeche text-akzent',
-  done: 'bg-flaeche text-erfolg',
+  'in-progress': 'bg-bernstein/30 text-bernstein-text',
+  done: 'bg-erfolg/10 text-erfolg',
 };
 
 export function StatusBadge({ status }: { status: ModuleStatus }) {
   return (
-    <span className={`inline-block rounded px-2 py-0.5 text-xs font-medium ${CLASSES[status]}`}>
+    <span
+      className={`inline-block whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-medium ${CLASSES[status]}`}
+    >
       {LABELS[status]}
     </span>
   );

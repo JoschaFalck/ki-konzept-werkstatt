@@ -6,16 +6,16 @@ interface TabsProps {
 
 export function Tabs({ tabs, active, onChange }: TabsProps) {
   return (
-    <div role="tablist" className="flex gap-1 border-b border-sekundaer/20">
+    <div role="tablist" className="inline-flex gap-1 rounded-full bg-primaer/10 p-1">
       {tabs.map((tab) => (
         <button
           key={tab.id}
           role="tab"
           aria-selected={tab.id === active}
           onClick={() => onChange(tab.id)}
-          className={`rounded-t px-4 py-2 text-base font-medium ${
+          className={`rounded-full px-4 py-1.5 text-base font-medium transition-colors ${
             tab.id === active
-              ? 'border-b-2 border-primaer text-primaer'
+              ? 'bg-primaer text-white shadow-schwebend'
               : 'text-sekundaer hover:text-text'
           }`}
         >

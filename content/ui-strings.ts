@@ -35,6 +35,11 @@ export const ui = {
       'Es gibt ungesicherte Änderungen, die nicht automatisch gespeichert werden konnten. Seite wirklich verlassen?',
   },
   start: {
+    heroEyebrow: 'Für Steuergruppen und Schulleitungen',
+    heroTitel1: 'Das KI-Konzept Ihrer Schule.',
+    heroTitel2: 'Strukturiert. Im Team. Ohne Cloud.',
+    heroHinweis: 'Keine Anmeldung, keine Datenübertragung — alles bleibt auf Ihrem Gerät.',
+    projekteTitel: 'Ihre Projekte',
     neuesProjekt: 'Neues Projekt anlegen',
     importieren: 'JSON-Datei importieren',
     leerTitel: 'Willkommen in der KI-Konzept-Werkstatt',
