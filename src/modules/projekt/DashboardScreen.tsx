@@ -37,7 +37,11 @@ function diagnoseStatus(project: Project): ModuleStatus {
 function ModulMotiv({ name }: { name: string }) {
   const bildUrl = bild(`modul-${name}`);
   if (bildUrl) {
-    return <img src={bildUrl} alt="" className="h-28 w-full rounded-t-karte object-cover" />;
+    return (
+      <div className="flex justify-center rounded-t-karte bg-flaeche">
+        <img src={bildUrl} alt="" className="h-44 w-auto object-contain" />
+      </div>
+    );
   }
   const glyphs: Record<string, React.ReactNode> = {
     diagnose: (
