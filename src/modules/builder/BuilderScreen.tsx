@@ -20,7 +20,7 @@ import { svgToPng } from '../../lib/export/chartToPng';
 import { checkExportGate, sectionStatus, type SectionStatus } from '../../lib/exportGate';
 import { slugify } from '../../lib/persistence';
 import { radarSvg } from '../../lib/radarSvg';
-import { LinkCard } from '../../components/LinkCard';
+import { MaterialKarte } from '../../components/MaterialKarte';
 import { useAppStore } from '../../store';
 import type { BuilderSection, Template } from '../../types/contentSchemas';
 import type { Project, SectionState } from '../../types/schemas';
@@ -328,7 +328,7 @@ export function BuilderScreen() {
       {vertiefung.length > 0 && (
         <div className="grid gap-3 sm:grid-cols-2 lg:max-w-2xl">
           {vertiefung.map((l) => (
-            <LinkCard key={l.id} link={l} />
+            <MaterialKarte key={l.id} eintrag={l} />
           ))}
         </div>
       )}

@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { ui } from '../../../content/ui-strings';
-import { LinkCard } from '../../components/LinkCard';
+import { MaterialKarte } from '../../components/MaterialKarte';
 import { MarkdownView } from '../../components/MarkdownView';
 import {
   diagnoseContent,
@@ -63,7 +63,7 @@ export function ReferenzScreen() {
               </h3>
               <div className="mt-3 grid gap-3 sm:grid-cols-2">
                 {vertiefung.map((l) => (
-                  <LinkCard key={l.id} link={l} />
+                  <MaterialKarte key={l.id} eintrag={l} />
                 ))}
               </div>
             </div>

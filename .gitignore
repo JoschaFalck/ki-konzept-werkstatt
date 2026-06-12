@@ -2,3 +2,7 @@ node_modules
 dist
 *.local
 .DS_Store
+
+# Lokale Arbeitsordner (Quellmaterial; optimierte Fassungen liegen in /public)
+Materialien/
+Bilder-Eingang/

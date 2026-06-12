@@ -82,13 +82,22 @@ export const HebelContentSchema = z.object({
   }),
 });
 
-export const LinkSchema = z.object({
-  id: z.string().min(1),
-  label: z.string().min(1),
-  url: z.string().url(),
-  type: z.enum(['artikel', 'tool', 'material']),
-  contexts: z.array(z.string()).default([]),
-});
+// Materialbibliothek (erweitert Juni 2026): Einträge sind externe Links
+// (url) oder mitgelieferte Dateien (datei, Pfad unter /public).
+export const LinkSchema = z
+  .object({
+    id: z.string().min(1),
+    label: z.string().min(1),
+    type: z.enum(['artikel', 'tool', 'material', 'download', 'grafik']),
+    url: z.string().url().optional(),
+    datei: z.string().min(1).optional(),
+    beschreibung: z.string().default(''),
+    lizenz: z.string().default(''),
+    contexts: z.array(z.string()).default([]),
+  })
+  .refine((l) => l.url !== undefined || l.datei !== undefined, {
+    message: 'Eintrag braucht url oder datei.',
+  });
 
 export const LinksContentSchema = z.object({
   $comment: z.string().optional(),
@@ -115,7 +124,7 @@ export const ProzessMaterialSchema = z.object({
 
 export const MaterialienContentSchema = z.object({
   $comment: z.string().optional(),
-  materialien: z.array(ProzessMaterialSchema).length(3),
+  materialien: z.array(ProzessMaterialSchema).min(1),
 });
 
 export type DiagnoseContent = z.infer<typeof DiagnoseContentSchema>;

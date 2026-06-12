@@ -3,11 +3,12 @@ import { ui } from '../../../content/ui-strings';
 import { Button } from '../../components/Button';
 import { Card } from '../../components/Card';
 import { MarkdownView } from '../../components/MarkdownView';
+import { MaterialKarte } from '../../components/MaterialKarte';
 import { PrintButton } from '../../components/PrintButton';
-import { kartenContent, materialienContent } from '../../lib/content';
+import { kartenContent, linksForContext, materialienContent } from '../../lib/content';
 
-// S10 Prozessbegleitung: vier Materialtypen (Diskussionskarten + drei
-// Markdown-Materialien), jeweils Ansicht + Druck.
+// S10 Prozessbegleitung: Diskussionskarten + Markdown-Materialien (Ansicht
+// und Druck) sowie druckfertige Downloads aus der Materialbibliothek.
 
 type Auswahl = 'karten' | string | null;
 
@@ -76,6 +77,8 @@ export function ProzessScreen() {
     );
   }
 
+  const prozessDownloads = linksForContext('prozess');
+
   return (
     <div className="space-y-6">
       <div className="max-w-prose">
@@ -105,6 +108,17 @@ export function ProzessScreen() {
           </Card>
         ))}
       </div>
+
+      {prozessDownloads.length > 0 && (
+        <section>
+          <h2 className="text-lg font-semibold">{ui.prozess.downloadsTitel}</h2>
+          <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {prozessDownloads.map((eintrag) => (
+              <MaterialKarte key={eintrag.id} eintrag={eintrag} />
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

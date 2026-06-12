@@ -18,6 +18,7 @@ import { BuilderScreen } from './modules/builder/BuilderScreen';
 import { MassnahmenScreen } from './modules/massnahmen/MassnahmenScreen';
 import { ProzessScreen } from './modules/prozess/ProzessScreen';
 import { HinweiseScreen, HerleitungScreen } from './modules/statisch/StatischeSeiten';
+import { MaterialienScreen } from './modules/materialien/MaterialienScreen';
 
 function StorageBanners() {
   const storageOk = useAppStore((s) => s.storageOk);
@@ -77,6 +78,9 @@ function Layout() {
         <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-2 px-4 py-6 text-sm">
           <span>{ui.app.footerFamilie}</span>
           <span className="flex flex-wrap gap-4">
+            <Link to="/materialien" className="underline hover:text-white">
+              {ui.materialien.titel}
+            </Link>
             <Link to="/hinweise" className="underline hover:text-white">
               {ui.hinweise.titel}
             </Link>
@@ -126,6 +130,7 @@ export function App() {
             <Route path="massnahmen" element={<MassnahmenScreen />} />
             <Route path="prozess" element={<ProzessScreen />} />
           </Route>
+          <Route path="/materialien" element={<MaterialienScreen />} />
           <Route path="/hinweise" element={<HinweiseScreen />} />
           <Route path="/herleitung" element={<HerleitungScreen />} />
         </Route>

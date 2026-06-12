@@ -46,6 +46,7 @@ Jeder Screen mit Route, Zweck und Kernelementen. Es gibt keine weiteren Screens;
 | S10 | `/#/p/:id/prozess` | **Prozessbegleitung** | Karten für die vier Materialtypen, jeweils Ansicht + Drucken-Button. |
 | S11 | `/#/hinweise` | **„Wie arbeiten wir im Team damit?"** | Statische Seite: Datei-Weitergabe-Modell, localStorage-Grenzen, Datenschutz-Selbsterklärung (keine Übertragung, keine Cookies außer localStorage). |
 | S12 | `/#/herleitung` | **Kriterien-Herleitung** | Statische Markdown-Seite (Quellen, Methode, Versionshistorie des Referenzrahmens). |
+| S13 | `/#/materialien` | **Materialbibliothek** (ergänzt Juni 2026 nach Rückfrage) | Alle Einträge aus links.json, filterbar nach Typ (Artikel/Werkzeuge/Downloads/Grafiken); dieselben Einträge erscheinen kontextbezogen in Referenzrahmen, Builder-Kapiteln, Auswertung und Prozessbegleitung. Verlinkt aus Footer und Dashboard. |
 
 **Leere Zustände (Pflicht):** S1 ohne Projekte → einladende Erklärung + großer Start-Button. S5 ohne abgeschlossene Diagnose → Erklärung statt leerem Chart. S9 ohne Maßnahmen → Hinweis mit Verweis auf Hebel aus der Auswertung.
 
@@ -255,7 +256,7 @@ Alle Content-Dateien werden beim Build durch ein Script (`npm run validate:conte
 - `content-beispiele/diagnose-items.example.json` — Dimension 1 komplett ausgearbeitet (5 Items × 4 Stufenbeschreibungen) als **Mustervorlage für Formulierungsqualität**: verhaltensnah, beobachtbar, diskutierbar. Die übrigen Dimensionen müssen diesem Standard folgen.
 - `content-beispiele/textgerueste.example.json` — Kapitel „Prüfen & Bewerten" mit zwei Gerüstvarianten in der Segment-Struktur aus 5.3.
 
-Weitere Content-Dateien (Strukturen analog anzulegen): `referenzrahmen/d1.md … d7.md` (mit Frontmatter: title, leitfrage, version), `hebel-texte.json`, `links.json` (`{ id, label, url, type: "artikel"|"tool"|"material", contexts: ["d3", "hebel-2", …] }`), `prozess/karten.json` (Diskussionskarten: `{ id, these, hinweis? }`), `ui-strings.ts`.
+Weitere Content-Dateien (Strukturen analog anzulegen): `referenzrahmen/d1.md … d7.md` (mit Frontmatter: title, leitfrage, version; Markdown unterstützt Bild-Blöcke `![alt](pfad)` mit Pfaden unter /public), `hebel-texte.json`, `links.json` (Materialbibliothek, erweitert Juni 2026: `{ id, label, type: "artikel"|"tool"|"material"|"download"|"grafik", url? , datei?, beschreibung?, lizenz?, contexts: ["d3", "sec-pruefen", "hebel-2", "prozess", …] }` — url ODER datei verpflichtend; datei-Pfade unter /public/materialien), `prozess/karten.json` (Diskussionskarten: `{ id, these, hinweis? }`), `prozess/materialien.json` (min. 1 Markdown-Material), `ui-strings.ts`.
 
 **Redaktionsregel für alle Inhalte:** keine Tool-Namen kommerzieller Anbieter in normativen Texten (Veralterung + Neutralität); Werkzeuge nur exemplarisch in Beispielen mit „z. B.".
 

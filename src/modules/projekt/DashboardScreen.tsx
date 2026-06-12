@@ -88,6 +88,15 @@ function ModulMotiv({ name }: { name: string }) {
         strokeLinejoin="round"
       />
     ),
+    materialien: (
+      <path
+        d="M8 12 L22 6 L36 12 V30 L22 36 L8 30 Z M22 6 V36 M8 12 L36 12"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+    ),
   };
   return (
     <div className="flex h-28 items-center justify-center rounded-t-karte bg-aurora-hero text-bernstein">
@@ -154,6 +163,13 @@ export function DashboardScreen() {
       to: `/p/${project.id}/prozess`,
       titel: ui.dashboard.module.prozess.titel,
       text: ui.dashboard.module.prozess.text,
+      status: null,
+    },
+    {
+      key: 'materialien',
+      to: '/materialien',
+      titel: ui.materialien.dashboardTitel,
+      text: ui.materialien.dashboardText,
       status: null,
     },
   ];

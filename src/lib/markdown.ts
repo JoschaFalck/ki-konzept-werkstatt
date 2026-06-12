@@ -32,6 +32,7 @@ export type BlockNode =
   | { type: 'paragraph'; inlines: InlineNode[] }
   | { type: 'list'; items: InlineNode[][] }
   | { type: 'quote'; inlines: InlineNode[] }
+  | { type: 'image'; alt: string; src: string }
   | { type: 'hr' };
 
 export function parseInlines(text: string): InlineNode[] {
@@ -72,7 +73,12 @@ export function parseMarkdown(body: string): BlockNode[] {
   for (const line of lines) {
     const trimmed = line.trim();
     const heading = trimmed.match(/^(#{1,4})\s+(.*)$/);
-    if (heading) {
+    const image = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (image) {
+      flushParagraph();
+      flushList();
+      blocks.push({ type: 'image', alt: image[1], src: image[2] });
+    } else if (heading) {
       flushParagraph();
       flushList();
       blocks.push({ type: 'heading', level: heading[1].length, inlines: parseInlines(heading[2]) });

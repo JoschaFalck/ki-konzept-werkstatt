@@ -4,7 +4,7 @@ import { Banner } from '../../components/Banner';
 import { Button } from '../../components/Button';
 import { Card } from '../../components/Card';
 import { EmptyState } from '../../components/EmptyState';
-import { LinkCard } from '../../components/LinkCard';
+import { MaterialKarte } from '../../components/MaterialKarte';
 import { PrintButton } from '../../components/PrintButton';
 import { RadarChart } from '../../components/RadarChart';
 import { ZahlAnimation } from '../../components/ZahlAnimation';
@@ -23,7 +23,7 @@ function HebelBox({ haupt, zusatz }: { haupt: HebelText; zusatz: HebelText[] }) 
       {linksFor(haupt).length > 0 && (
         <div className="mt-3 grid gap-3 sm:grid-cols-2">
           {linksFor(haupt).map((l) => (
-            <LinkCard key={l.id} link={l} />
+            <MaterialKarte key={l.id} eintrag={l} />
           ))}
         </div>
       )}

@@ -1,5 +1,5 @@
 {
-  "$comment": "ENTWURF von Claude als Diskussionsgrundlage — fachliche Prüfung und Überarbeitung durch Joscha Falck erforderlich. Dimension d1 stammt wortgleich aus content-beispiele/diagnose-items.example.json (Qualitätsreferenz). d2–d7 folgen diesem Standard: verhaltensnah, beobachtbar, in einer Steuergruppe diskutierbar.",
+  "$comment": "ENTWURF von Claude als Diskussionsgrundlage — fachliche Prüfung und Überarbeitung durch Joscha Falck erforderlich. Dimension d1 stammt wortgleich aus content-beispiele/diagnose-items.example.json (Qualitätsreferenz). d2–d7 folgen diesem Standard: verhaltensnah, beobachtbar, in einer Steuergruppe diskutierbar. Dimension d4 ist am KI-Kompetenzmodell (CC BY 4.0, Alles/Falck/Flick/Schulz) ausgerichtet: vier Items = vier Kompetenzbereiche, Stufenbeschreibungen orientieren sich an den Niveaustufen I–III.",
   "contentVersion": "0.1-entwurf",
   "dimensions": [
     {
@@ -325,97 +325,97 @@
     {
       "id": "d4",
       "title": "KI-Kompetenzen der Schüler:innen",
-      "leitfrage": "Lernen unsere Schüler:innen systematisch, KI kompetent, kritisch und selbstbestimmt zu nutzen?",
+      "leitfrage": "Bauen unsere Schüler:innen KI-Kompetenz systematisch auf — im Sinne der vier Bereiche Verstehen, Anwenden, Reflektieren, Mitgestalten?",
       "items": [
         {
           "id": "d4-i1",
-          "text": "Systematischer Aufbau von KI-Grundverständnis",
+          "text": "Kompetenzbereich „Verstehen“: Wissen über KI-Funktionsweise, Begriffe und Mechanismen",
           "deprecated": false,
           "levels": [
             {
               "level": 0,
-              "description": "Wie KI-Systeme funktionieren (Wahrscheinlichkeiten, Trainingsdaten, Halluzinationen), ist kein Unterrichtsgegenstand. Das Verständnis der Schüler:innen speist sich aus privater Nutzung und sozialen Medien."
+              "description": "Wie KI-Systeme funktionieren (Trainingsdaten, Wahrscheinlichkeiten, Halluzinationen), ist kein Unterrichtsgegenstand. Das Verständnis der Schüler:innen speist sich aus privater Nutzung und sozialen Medien."
             },
             {
               "level": 1,
-              "description": "Grundlagen werden punktuell behandelt (z. B. im Informatikunterricht einer Jahrgangsstufe), erreichen aber nicht alle Schüler:innen."
+              "description": "Grundlagen werden punktuell behandelt (z. B. in einer Jahrgangsstufe im Informatikunterricht): Schüler:innen können KI-Beispiele aus dem Alltag benennen und einfache Prinzipien der Bedienung beschreiben (Niveaustufe I). Eine schulweite Linie fehlt."
             },
             {
               "level": 2,
-              "description": "Es ist vereinbart, in welchen Fächern und Jahrgangsstufen KI-Grundverständnis aufgebaut wird; die meisten Schüler:innen durchlaufen diese Bausteine."
+              "description": "Es ist vereinbart, in welchen Fächern und Jahrgangsstufen KI-Verständnis aufgebaut wird; die meisten Schüler:innen können Konzepte und Funktionsweisen erklären und Grenzen benennen (Niveaustufe II)."
             },
             {
               "level": 3,
-              "description": "Ein aufeinander aufbauendes Curriculum (Spiralprinzip über die Jahrgangsstufen) ist etabliert und wird regelmäßig an die technische Entwicklung angepasst."
+              "description": "Ein aufeinander aufbauendes Curriculum ist etabliert und wird an die technische Entwicklung angepasst; ältere Schüler:innen vergleichen KI-Modelle, beurteilen deren Eignung und durchschauen Bedienkonzepte komplexer Werkzeuge (Niveaustufe III)."
             }
           ]
         },
         {
           "id": "d4-i2",
-          "text": "Kritische Bewertung von KI-Ausgaben durch Schüler:innen",
+          "text": "Kompetenzbereich „Anwenden“: bewusste Bedienung, Steuerung und Anpassung von KI",
           "deprecated": false,
           "levels": [
             {
               "level": 0,
-              "description": "Schüler:innen übernehmen KI-Ausgaben in der Regel ungeprüft. Strategien zur Überprüfung (Quellencheck, Plausibilisierung) werden nicht vermittelt."
+              "description": "Schüler:innen nutzen KI unbegleitet und unreflektiert (Copy-Paste-Nutzung). Gezielte Anwendungsstrategien werden nicht vermittelt."
             },
             {
               "level": 1,
-              "description": "Einzelne Lehrkräfte thematisieren Fehler und Verzerrungen von KI-Ausgaben, aber ohne systematische Übung."
+              "description": "Einzelne Lehrkräfte üben Anwendungen ein (z. B. KI-Tools zur Lernunterstützung bedienen, Vorlese- oder Übersetzungsfunktionen nutzen — Niveaustufe I), ohne abgestimmtes Vorgehen."
             },
             {
               "level": 2,
-              "description": "Das Prüfen von KI-Ausgaben wird in mehreren Fächern aktiv geübt (z. B. Faktencheck-Aufgaben, Fehlersuche in KI-Texten); Schüler:innen kennen Grundstrategien."
+              "description": "In mehreren Fächern lernen Schüler:innen, KI gezielt einzusetzen: passende Tools für Aufgabenstellungen auswählen, Ergebnisse durch gezieltes Nachsteuern verbessern, Arbeitsprozesse bewusst gestalten (Niveaustufe II)."
             },
             {
               "level": 3,
-              "description": "Kritische Bewertung ist eingeübte Routine: Schüler:innen prüfen KI-Ausgaben selbstständig, können Verzerrungen benennen und tun dies erkennbar auch ohne Aufforderung."
+              "description": "Souveräne Anwendung ist im Schulcurriculum verankert: Schüler:innen entwerfen eigene KI-gestützte Arbeitsabläufe, kombinieren Werkzeuge zweckbezogen und entscheiden begründet, wann sie auf KI verzichten (Niveaustufe III)."
             }
           ]
         },
         {
           "id": "d4-i3",
-          "text": "Reflexion über Autorschaft, Eigenleistung und akademische Ehrlichkeit",
+          "text": "Kompetenzbereich „Reflektieren“: kritische Bewertung von KI-Output, Eigenleistung und Risiken",
           "deprecated": false,
           "levels": [
             {
               "level": 0,
-              "description": "Fragen von Autorschaft und Eigenleistung beim KI-Einsatz werden nicht besprochen. Schüler:innen entwickeln ihre Maßstäbe allein."
+              "description": "Schüler:innen übernehmen KI-Ausgaben in der Regel ungeprüft. Prüfstrategien, Verzerrungen und die Frage der Eigenleistung werden nicht thematisiert."
             },
             {
               "level": 1,
-              "description": "Das Thema kommt anlassbezogen vor (meist als Täuschungsvorwurf), aber nicht als eigenständiger Lerngegenstand."
+              "description": "Einzelne Lehrkräfte thematisieren Fehler und Risiken anlassbezogen; Schüler:innen können erste Beispiele für Grenzen und Probleme von KI benennen (Niveaustufe I), ohne systematische Übung."
             },
             {
               "level": 2,
-              "description": "In mehreren Fächern wird explizit erarbeitet, was Eigenleistung beim Arbeiten mit KI bedeutet und wie KI-Beiträge gekennzeichnet werden; es gibt eingeführte Kennzeichnungskonventionen."
+              "description": "Kritisches Prüfen wird in mehreren Fächern aktiv geübt (Faktencheck, Fehlersuche, Quellenvergleich); Schüler:innen diskutieren Entscheidungsgrenzen, erkennen Verzerrungen und können ihre Eigenleistung beim Arbeiten mit KI benennen und kennzeichnen (Niveaustufe II)."
             },
             {
               "level": 3,
-              "description": "Schüler:innen verfügen über ein belastbares, gemeinsam erarbeitetes Verständnis von Eigenleistung; sie legen KI-Nutzung selbstverständlich offen, weil Offenlegung nicht sanktioniert, sondern als Kompetenz gewertet wird."
+              "description": "Reflexion ist eingeübte Routine: Schüler:innen hinterfragen KI-gestützte Prozesse selbstständig, beurteilen Auswirkungen auf Lernen, Gesellschaft und Arbeitswelt und legen ihre KI-Nutzung offen, weil Offenlegung als Kompetenz gilt (Niveaustufe III)."
             }
           ]
         },
         {
           "id": "d4-i4",
-          "text": "Gesellschaftliche und ethische Dimensionen von KI im Unterricht",
+          "text": "Kompetenzbereich „Mitgestalten“: Entwicklung, Diskussion und Teilhabe",
           "deprecated": false,
           "levels": [
             {
               "level": 0,
-              "description": "Gesellschaftliche Folgen von KI (Arbeitswelt, Desinformation, Datenschutz, Umweltkosten, Machtkonzentration) sind kein Unterrichtsthema."
+              "description": "Schüler:innen haben keine Gelegenheit, KI-Themen aktiv mitzugestalten — weder in Projekten noch bei schulischen Regeln. Das Thema passiert mit ihnen, nicht durch sie."
             },
             {
               "level": 1,
-              "description": "Einzelne Lehrkräfte greifen das Thema nach Aktualitätslage auf (z. B. ein Zeitungsartikel), ohne curriculare Verankerung."
+              "description": "Vereinzelt äußern Schüler:innen Ideen, wie KI das eigene Lernumfeld verbessern könnte (Niveaustufe I), z. B. in einzelnen Unterrichtsgesprächen — ohne Format und Folgen."
             },
             {
               "level": 2,
-              "description": "Gesellschaftliche und ethische KI-Fragen sind in mehreren Fächern verankert (z. B. Deutsch, Ethik/Religion, Sozialkunde) und werden kontrovers und altersangemessen behandelt."
+              "description": "Es gibt Formate, in denen Schüler:innen KI-Projekte im eigenen Umfeld vorstellen und Optimierungsmöglichkeiten diskutieren (Niveaustufe II), z. B. Projektarbeiten, Wettbewerbe oder die Mitwirkung der SMV an den KI-Regeln der Schule."
             },
             {
               "level": 3,
-              "description": "Die Schule ermöglicht vertiefte Auseinandersetzung über den Fachunterricht hinaus (z. B. Projekttage, Debattenformate, Beteiligung der SMV an Schulregeln) und verbindet sie mit der eigenen Schulpraxis."
+              "description": "Mitgestaltung ist strukturell verankert: Schüler:innen modifizieren und veröffentlichen eigene KI-Vorhaben, diskutieren ethische Leitlinien mit und planen Innovationsprojekte initiativ und strategisch (Niveaustufe III); ihre Beteiligung an schulischen KI-Entscheidungen ist Regelfall."
             }
           ]
         }

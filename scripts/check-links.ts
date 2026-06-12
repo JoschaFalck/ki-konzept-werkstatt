@@ -13,6 +13,7 @@ const data = LinksContentSchema.parse(
 
 let failures = 0;
 for (const link of data.links) {
+  if (!link.url) continue; // datei-Einträge liegen lokal und werden vom Build geprüft
   try {
     const response = await fetch(link.url, { method: 'GET', redirect: 'follow' });
     if (response.ok) {

@@ -1,3 +1,4 @@
+import { dateiUrl } from '../lib/assets';
 import { parseMarkdown, type InlineNode } from '../lib/markdown';
 
 function Inlines({ nodes }: { nodes: InlineNode[] }) {
@@ -70,6 +71,22 @@ export function MarkdownView({ markdown }: { markdown: string }) {
               <p key={i} className="border-l-4 border-akzent pl-4 text-sm italic text-sekundaer">
                 <Inlines nodes={block.inlines} />
               </p>
+            );
+          case 'image':
+            return (
+              <figure key={i} className="my-5">
+                <a href={dateiUrl(block.src)} target="_blank" rel="noreferrer noopener">
+                  <img
+                    src={dateiUrl(block.src)}
+                    alt={block.alt}
+                    loading="lazy"
+                    className="w-full rounded-karte shadow-schwebend"
+                  />
+                </a>
+                {block.alt && (
+                  <figcaption className="mt-2 text-xs text-sekundaer">{block.alt}</figcaption>
+                )}
+              </figure>
             );
           case 'hr':
             return <hr key={i} className="border-sekundaer/20" />;

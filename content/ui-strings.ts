@@ -144,6 +144,27 @@ export const ui = {
     radarLabel: 'Spinnennetz-Diagramm der Mittelwerte: {werte}',
     nichtVollstaendig: 'unvollständig',
   },
+  materialien: {
+    titel: 'Materialbibliothek',
+    intro:
+      'Alle Materialien rund um das schulische KI-Konzept an einem Ort: Artikel, Werkzeuge, Grafiken und Downloads. Dieselben Materialien erscheinen auch dort, wo sie inhaltlich hingehören — im Referenzrahmen, in den Konzept-Kapiteln und in der Prozessbegleitung.',
+    filterAlle: 'Alle',
+    filterArtikel: 'Artikel',
+    filterWerkzeuge: 'Werkzeuge',
+    filterDownloads: 'Downloads',
+    filterGrafiken: 'Grafiken',
+    herunterladen: 'Herunterladen',
+    grafikOeffnen: 'In voller Größe öffnen',
+    lizenz: 'Lizenz',
+    dashboardTitel: 'Materialbibliothek',
+    dashboardText:
+      'Artikel, Grafiken, Leitfäden und druckfertige Downloads — die fachlichen Grundlagen der Werkstatt, gesammelt und kontextbezogen verknüpft.',
+    typArtikel: 'Artikel',
+    typTool: 'Werkzeug',
+    typMaterial: 'Material',
+    typDownload: 'Download',
+    typGrafik: 'Grafik',
+  },
   referenz: {
     titel: 'Referenzrahmen',
     intro:
@@ -236,6 +257,7 @@ export const ui = {
       'Acht Thesen für Konferenzen und pädagogische Tage — bewusst zugespitzt, zum Zerschneiden.',
     ansehen: 'Ansehen',
     kartenHinweisLabel: 'Hinweis zur Moderation',
+    downloadsTitel: 'Druckfertige Downloads',
   },
   hinweise: {
     titel: 'Wie arbeiten wir im Team damit?',

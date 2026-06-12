@@ -1,26 +1,176 @@
 {
-  "$comment": "ENTWURF — URLs durch Joscha Falck zu prüfen und zu ergänzen (PLATZHALTER: Die Ziel-URLs für Architektur-Artikel und Raster-Builder bitte bestätigen oder korrigieren).",
+  "$comment": "Materialbibliothek. Externe URLs am 12.06.2026 verifiziert (Linkcheck: npx tsx scripts/check-links.ts prüft nur url-Einträge). datei-Pfade liegen unter /public. contexts: d1–d7 (Referenzrahmen/Diagnose), sec-* (Builder-Kapitel), hebel-* (Auswertung), prozess (Prozessbegleitung).",
   "links": [
     {
       "id": "link-architektur",
-      "label": "Artikel: Architektur schulischer KI-Konzepte",
-      "url": "https://joschafalck.de/",
+      "label": "Artikel: Architektur der KI-Didaktik",
       "type": "artikel",
-      "contexts": ["d1", "hebel-1", "sec-praeambel"]
+      "url": "https://joschafalck.de/architektur-ki-didaktik/",
+      "beschreibung": "Das Grundlagenmodell: Bedingungen für lernwirksamen Unterricht im KI-Zeitalter — fachliche Basis dieser Werkstatt.",
+      "contexts": ["d1", "d2", "hebel-1", "sec-praeambel"]
+    },
+    {
+      "id": "grafik-architektur",
+      "label": "Grafik: Architektur der KI-Didaktik",
+      "type": "grafik",
+      "datei": "materialien/architektur-ki-didaktik.jpg",
+      "lizenz": "CC BY-SA 4.0 · Joscha Falck",
+      "beschreibung": "Die Übersichtsgrafik des Modells — geeignet für Konferenzen und pädagogische Tage.",
+      "contexts": ["d1", "d2", "hebel-1"]
+    },
+    {
+      "id": "grafik-architektur-sketchnote",
+      "label": "Grafik: Architektur als Sketchnote",
+      "type": "grafik",
+      "datei": "materialien/architektur-sketchnote.jpg",
+      "lizenz": "CC BY-SA 4.0 · Joscha Falck",
+      "beschreibung": "Zusammenfassung des Modells als Sketchnote — der schnelle Einstieg für das Kollegium.",
+      "contexts": ["d1", "sec-praeambel", "prozess"]
+    },
+    {
+      "id": "grafik-lernen-mit-ki",
+      "label": "Grafik: Modell Lernen mit KI",
+      "type": "grafik",
+      "datei": "materialien/architektur-lernen-mit-ki.png",
+      "lizenz": "CC BY-SA 4.0 · Joscha Falck",
+      "beschreibung": "Wie KI Lernprozesse unterstützen, begleiten und stören kann.",
+      "contexts": ["d2", "sec-unterricht"]
+    },
+    {
+      "id": "grafik-planungsvorlage",
+      "label": "Grafik: Planungsvorlage KI-Aufgabenkultur",
+      "type": "grafik",
+      "datei": "materialien/architektur-planungsvorlage.jpg",
+      "lizenz": "CC BY-SA 4.0 · Joscha Falck / Manuel Flick",
+      "beschreibung": "Praktische Vorlage zur Planung KI-resilienter, KI-integrierender und KI-reflektierender Aufgaben.",
+      "contexts": ["d2", "sec-unterricht"]
+    },
+    {
+      "id": "link-planungsvorlage-artikel",
+      "label": "Artikel: Planungsvorlage zur Aufgabenkultur",
+      "type": "artikel",
+      "url": "https://joschafalck.de/ki-didaktik-planungsvorlage/",
+      "beschreibung": "Erläuterung und Download der Planungsvorlage zur KI-Aufgabenkultur.",
+      "contexts": ["d2", "sec-unterricht"]
+    },
+    {
+      "id": "link-leitfaden-aufgaben",
+      "label": "Leitfaden: Aufgabenkultur mit KI",
+      "type": "artikel",
+      "url": "https://joschafalck.de/leitfaden-aufgaben/",
+      "beschreibung": "Wie sich Aufgabenformate verändern, wenn KI verfügbar ist — mit konkreten Beispielen.",
+      "contexts": ["d2", "sec-unterricht"]
+    },
+    {
+      "id": "download-ki-regeln-1",
+      "label": "Download: KI-Regeln für die Klasse (Poster I)",
+      "type": "download",
+      "datei": "materialien/ki-regeln-klassenposter-1.pdf",
+      "lizenz": "CC BY-SA 4.0 · Joscha Falck",
+      "beschreibung": "Druckfertiges Ampel-Regelwerk für die Klassenebene — als Beispiel gedacht, schulspezifisch anzupassen.",
+      "contexts": ["d1", "sec-regeln", "prozess"]
+    },
+    {
+      "id": "download-ki-regeln-2",
+      "label": "Download: KI-Regeln für die Klasse (Poster II)",
+      "type": "download",
+      "datei": "materialien/ki-regeln-klassenposter-2.pdf",
+      "lizenz": "CC BY-SA 4.0 · Joscha Falck",
+      "beschreibung": "Zweite Variante des Klassenregel-Posters — für jüngere Jahrgangsstufen.",
+      "contexts": ["d1", "sec-regeln", "prozess"]
+    },
+    {
+      "id": "link-pruefen-und-ki",
+      "label": "Artikel: Prüfen und KI",
+      "type": "artikel",
+      "url": "https://joschafalck.de/pruefen-und-ki/",
+      "beschreibung": "Warum klassische Prüfungsformate unter KI-Bedingungen nicht mehr messen, was sie messen sollen.",
+      "contexts": ["d3"]
+    },
+    {
+      "id": "download-leitfaden-pruefen",
+      "label": "Download: KI-Leitfaden Prüfen und Bewerten (PDF)",
+      "type": "download",
+      "datei": "materialien/ki-leitfaden-pruefen-bewerten.pdf",
+      "lizenz": "Joscha Falck / Manuel Flick",
+      "beschreibung": "Der vollständige Leitfaden für eine KI-bewusste Prüfungs- und Bewertungskultur.",
+      "contexts": ["d3", "sec-pruefen", "hebel-2"]
+    },
+    {
+      "id": "link-leitfaden-pruefen-artikel",
+      "label": "Artikel: KI-Leitfaden Prüfen und Bewerten",
+      "type": "artikel",
+      "url": "https://joschafalck.de/ki-leitfaden-pruefen/",
+      "beschreibung": "Begleitartikel zum Leitfaden mit Hintergründen und Aktualisierungen.",
+      "contexts": ["d3", "sec-pruefen"]
+    },
+    {
+      "id": "grafik-sichtachsen",
+      "label": "Grafik: Sichtachsen der Eigenleistung",
+      "type": "grafik",
+      "datei": "materialien/architektur-sichtachsen.jpg",
+      "lizenz": "CC BY-SA 4.0 · Joscha Falck",
+      "beschreibung": "Wie Eigenleistung trotz KI sichtbar wird: Prozess, Urteilsfähigkeit, Reflexion, Transfer.",
+      "contexts": ["d3", "sec-pruefen"]
     },
     {
       "id": "link-raster-builder",
-      "label": "Bewertungsraster-Builder für KI-gestützte Leistungen",
-      "url": "https://joschafalck.github.io/ki-bewertungsraster/",
+      "label": "Werkzeug: Bewertungsraster-Builder",
       "type": "tool",
+      "url": "https://joschafalck.github.io/ki-raster-builder/index.html",
+      "beschreibung": "Interaktiver Builder: 11 Bewertungsraster für KI-gestützte Leistungen zusammenstellen und als Word-Datei exportieren.",
       "contexts": ["d3", "hebel-2", "sec-pruefen"]
     },
     {
-      "id": "link-kompetenzrahmen",
-      "label": "Material: KI-Kompetenzen für Schüler:innen",
-      "url": "https://joschafalck.de/",
-      "type": "material",
+      "id": "link-raster-artikel",
+      "label": "Artikel: 11 KI-Bewertungsraster",
+      "type": "artikel",
+      "url": "https://joschafalck.de/ki-bewertungsraster/",
+      "beschreibung": "Vorstellung aller elf Raster (je Lehrkraft- und Schüler:innen-Version) mit didaktischer Einordnung.",
+      "contexts": ["d3", "sec-pruefen"]
+    },
+    {
+      "id": "download-raster-zip",
+      "label": "Download: Alle 11 Bewertungsraster (Word, ZIP)",
+      "type": "download",
+      "url": "https://joschafalck.de/wp-content/uploads/2026/04/Bewertungsraster_alle_Word.zip",
+      "lizenz": "Joscha Falck",
+      "beschreibung": "Komplettpaket aller Raster als bearbeitbare Word-Dateien — je Raster eine Lehrkraft- und eine Schüler:innen-Version.",
+      "contexts": ["d3", "sec-pruefen"]
+    },
+    {
+      "id": "grafik-kompetenzmodell",
+      "label": "Grafik: KI-Kompetenzmodell (Überblick)",
+      "type": "grafik",
+      "datei": "materialien/kompetenzmodell-uebersicht.png",
+      "lizenz": "CC BY 4.0 · Alles / Falck / Flick / Schulz",
+      "beschreibung": "Die vier Kompetenzbereiche Verstehen, Anwenden, Reflektieren, Mitgestalten — für Lehrende und Lernende.",
       "contexts": ["d4", "sec-kompetenzen"]
+    },
+    {
+      "id": "grafik-kompetenzmodell-progression",
+      "label": "Grafik: KI-Kompetenzmodell (Niveaustufen)",
+      "type": "grafik",
+      "datei": "materialien/kompetenzmodell-progression.jpg",
+      "lizenz": "CC BY 4.0 · Alles / Falck / Flick / Schulz",
+      "beschreibung": "Die Progression über drei Niveaustufen je Kompetenzbereich — Grundlage für schulinterne Curricula.",
+      "contexts": ["d4", "sec-kompetenzen"]
+    },
+    {
+      "id": "link-kompetenzmodell-artikel",
+      "label": "Artikel: KI-Kompetenzmodell",
+      "type": "artikel",
+      "url": "https://joschafalck.de/ki-kompetenzen/",
+      "beschreibung": "Herleitung und Einsatzszenarien des Kompetenzmodells.",
+      "contexts": ["d4", "sec-kompetenzen"]
+    },
+    {
+      "id": "link-aktiv-framework",
+      "label": "Artikel: Das AKTIV-Framework (Manuel Flick)",
+      "type": "artikel",
+      "url": "https://www.manuelflick.de/blog/aktiv-framework",
+      "beschreibung": "Fünf Schritte für die KI-Schulentwicklung: Ausprobieren, Kommunizieren, Transformieren, Integrativ Prüfen, Verändern.",
+      "contexts": ["prozess", "d6", "sec-steuerung"]
     }
   ]
 }
