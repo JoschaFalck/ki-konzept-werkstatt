@@ -235,7 +235,7 @@ export function StartScreen() {
       {index.length > 0 && (
         <section className="anim-auf anim-auf-1">
           <h2 className="text-xl font-semibold">{ui.start.projekteTitel}</h2>
-          <div className="mt-4 flex flex-col gap-3 md:max-w-xl">
+          <div className="mt-4 flex flex-col gap-3">
             {index.map((meta) => (
               <ProjectCard
                 key={meta.id}

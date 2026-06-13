@@ -25,10 +25,10 @@ function Inlines({ nodes }: { nodes: InlineNode[] }) {
   );
 }
 
-export function MarkdownView({ markdown }: { markdown: string }) {
+export function MarkdownView({ markdown, wide = false }: { markdown: string; wide?: boolean }) {
   const blocks = parseMarkdown(markdown);
   return (
-    <div className="max-w-prose space-y-4">
+    <div className={`space-y-4 ${wide ? '' : 'max-w-prose'}`}>
       {blocks.map((block, i) => {
         switch (block.type) {
           case 'heading': {

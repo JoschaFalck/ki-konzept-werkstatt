@@ -20,7 +20,7 @@ function StaticPage({ title, body, bildName }: { title: string; body: string; bi
       )}
       <h1 className="text-2xl font-semibold">{title}</h1>
       <div className="mt-5">
-        <MarkdownView markdown={body} />
+        <MarkdownView markdown={body} wide />
       </div>
     </article>
   );
