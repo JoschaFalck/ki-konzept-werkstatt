@@ -16,8 +16,8 @@
     "governance": {
       "id": "hebel-3",
       "titel": "Ohne Steuerung versanden Maßnahmen",
-      "text": "Ihre Einschätzungen zeigen: Es fehlt eine tragfähige Steuerungsstruktur (Dimension „Steuerung & Schulentwicklung“). Erfahrungsgemäß versanden auch gute inhaltliche Maßnahmen, wenn niemand mit Mandat ihre Umsetzung verfolgt, Beschlüsse dokumentiert und das Thema in den Gremien wachhält. Empfehlung: Klären Sie vor weiteren inhaltlichen Maßnahmen die Verantwortungsfrage — eine beauftragte Steuergruppe mit klarem Auftrag der Schulleitung, verteilt auf mehrere Schultern. Das ist unspektakulär, aber die Voraussetzung dafür, dass alles andere trägt. Einen zugänglichen Fahrplan für die nächsten Schritte bietet das AKTIV-Framework.",
-      "linkIds": ["link-aktiv-framework"]
+      "text": "Ihre Einschätzungen zeigen: Es fehlt eine tragfähige Steuerungsstruktur (Dimension „Steuerung & Schulentwicklung“). Erfahrungsgemäß versanden auch gute inhaltliche Maßnahmen, wenn niemand mit Mandat ihre Umsetzung verfolgt, Beschlüsse dokumentiert und das Thema in den Gremien wachhält. Empfehlung: Klären Sie vor weiteren inhaltlichen Maßnahmen die Verantwortungsfrage — eine beauftragte Steuergruppe mit klarem Auftrag der Schulleitung, verteilt auf mehrere Schultern. Das ist unspektakulär, aber die Voraussetzung dafür, dass alles andere trägt. Einen zugänglichen Fahrplan für die nächsten Schritte bietet das AKTIV-Framework; das PRISMA-Modell hilft, einzelne Maßnahmen vor der Umsetzung gründlich zu durchdenken.",
+      "linkIds": ["link-aktiv-framework", "link-prisma-framework"]
     },
     "spreizung": {
       "id": "hebel-4",

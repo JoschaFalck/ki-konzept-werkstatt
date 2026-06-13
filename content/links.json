@@ -223,6 +223,14 @@
       "url": "https://www.manuelflick.de/blog/aktiv-framework",
       "beschreibung": "Fünf Schritte für die KI-Schulentwicklung: Ausprobieren, Kommunizieren, Transformieren, Integrativ Prüfen, Verändern.",
       "contexts": ["prozess", "d6", "sec-steuerung"]
+    },
+    {
+      "id": "link-prisma-framework",
+      "label": "Artikel: Das PRISMA-Modell (Felix Urban)",
+      "type": "artikel",
+      "url": "https://www.felixurban.com/post/prisma-ein-modell-für-dynamische-schulentwicklung-im-zeitalter-des-wandels",
+      "beschreibung": "Sechs Analysedimensionen für KI-Entscheidungen: Potenziale, Risiken, Integration, Skills, Mehrwert, Analyse — ein Prisma, das je nach Blickwinkel andere Aspekte sichtbar macht.",
+      "contexts": ["prozess", "d6", "sec-steuerung", "d2"]
     }
   ]
 }
