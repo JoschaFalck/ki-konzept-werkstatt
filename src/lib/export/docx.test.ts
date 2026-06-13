@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { exportConcept } from './docx';
-import { exportConceptMarkdown } from './markdown';
+import { exportConcept, exportSection } from './docx';
+import { exportConceptMarkdown, exportSectionMarkdown } from './markdown';
 import { OPEN_MARKER } from './conceptModel';
 import { CONTENT_VERSION, diagnoseContent, hebelContent, textgeruesteContent } from '../content';
 import { activeItems } from '../auswertung';
@@ -102,5 +102,19 @@ describe('exportConceptMarkdown', () => {
     expect(md).toContain('Maßnahmenplan');
     expect(md).toContain(OPEN_MARKER);
     expect(md).toContain('keine – zusätzliche Belastung bewusst in Kauf genommen');
+  });
+});
+
+describe('kapitelweiser Export', () => {
+  it('exportSectionMarkdown enthält nur das gewählte Kapitel', () => {
+    const md = exportSectionMarkdown(sampleProject(), deps, 'sec-pruefen');
+    expect(md).toContain('Prüfen & Bewerten');
+    expect(md).not.toContain('Maßnahmenplan');
+    expect(md).not.toContain('Ausgangslage');
+  });
+
+  it('exportSection liefert ohne Exception einen Blob', async () => {
+    const blob = await exportSection(sampleProject(), deps, 'sec-pruefen');
+    expect(blob.size).toBeGreaterThan(1024);
   });
 });

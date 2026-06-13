@@ -12,7 +12,12 @@ import {
   WidthType,
 } from 'docx';
 import type { Project } from '../../types/schemas';
-import { buildConceptDocument, type ConceptDeps } from './conceptModel';
+import {
+  buildConceptDocument,
+  buildSectionDocument,
+  type ConceptDeps,
+  type ConceptDocument,
+} from './conceptModel';
 
 // DOCX-Export (Spezifikation 5.5). UI ruft nur exportConcept(...) auf.
 // Formatierung: Heading 1/2, 11-pt-Grundschrift, nur Grautöne.
@@ -47,12 +52,7 @@ function tableOf(header: string[], rows: string[][]): Table {
  * radarPng: gerasterte Spinnennetz-Grafik (siehe chartToPng.ts); null, wenn
  * keine Diagnose-Daten vorliegen oder die Rasterung fehlschlägt.
  */
-export async function exportConcept(
-  project: Project,
-  deps: ConceptDeps,
-  radarPng: Uint8Array | null,
-): Promise<Blob> {
-  const doc = buildConceptDocument(project, deps);
+async function renderDocx(doc: ConceptDocument, radarPng: Uint8Array | null): Promise<Blob> {
   const children: (Paragraph | Table)[] = [];
 
   // 1. Deckblatt
@@ -135,4 +135,26 @@ export async function exportConcept(
   });
 
   return Packer.toBlob(file);
+}
+
+/**
+ * Erzeugt das vollständige Konzeptdokument als DOCX-Blob.
+ * radarPng: gerasterte Spinnennetz-Grafik (siehe chartToPng.ts); null, wenn
+ * keine Diagnose-Daten vorliegen oder die Rasterung fehlschlägt.
+ */
+export async function exportConcept(
+  project: Project,
+  deps: ConceptDeps,
+  radarPng: Uint8Array | null,
+): Promise<Blob> {
+  return renderDocx(buildConceptDocument(project, deps), radarPng);
+}
+
+/** Erzeugt ein einzelnes Kapitel als DOCX-Blob (kapitelweiser Export). */
+export async function exportSection(
+  project: Project,
+  deps: ConceptDeps,
+  sectionId: string,
+): Promise<Blob> {
+  return renderDocx(buildSectionDocument(project, deps, sectionId), null);
 }

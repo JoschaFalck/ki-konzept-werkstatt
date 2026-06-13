@@ -159,6 +159,31 @@ function massnahmenChapter(project: Project, deps: ConceptDeps): ConceptChapter 
   return { title: 'Maßnahmenplan', blocks };
 }
 
+/**
+ * Dokument für ein einzelnes Kapitel (kapitelweiser Export). Enthält nur das
+ * gewählte Builder-Kapitel — keine Ausgangslage, keinen Maßnahmenplan.
+ */
+export function buildSectionDocument(
+  project: Project,
+  deps: ConceptDeps,
+  sectionId: string,
+): ConceptDocument {
+  const auswertung = computeAuswertung(deps.diagnose, project);
+  const section = deps.gerueste.sections.find((s) => s.id === sectionId);
+  const title = section?.title ?? sectionId;
+  const date = new Date();
+  return {
+    title: `${project.title} — ${title}`,
+    dateLabel: date.toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' }),
+    versionLine: `Auszug aus dem KI-Konzept · erstellt mit der KI-Konzept-Werkstatt · Referenzrahmen v${deps.contentVersion}`,
+    hinweis: [
+      `Dies ist ein einzelnes Kapitel aus dem KI-Konzept Ihrer Schule (Arbeitsstand). Noch nicht geklärte Punkte sind im Text markiert: ${OPEN_MARKER}.`,
+    ],
+    chapters: [{ title, blocks: sectionBlocks(project, deps, sectionId) }],
+    auswertung,
+  };
+}
+
 export function buildConceptDocument(project: Project, deps: ConceptDeps): ConceptDocument {
   const auswertung = computeAuswertung(deps.diagnose, project);
   const chapters: ConceptChapter[] = [];

@@ -4,7 +4,6 @@ import { ui } from '../../../content/ui-strings';
 import { Banner } from '../../components/Banner';
 import { Button } from '../../components/Button';
 import { Card } from '../../components/Card';
-import { EmptyState } from '../../components/EmptyState';
 import { Modal } from '../../components/Modal';
 import { ProgressBar } from '../../components/ProgressBar';
 import { TextField } from '../../components/TextField';
@@ -232,17 +231,8 @@ export function StartScreen() {
         </Banner>
       )}
 
-      {index.length === 0 ? (
-        <div className="anim-auf anim-auf-2">
-          <EmptyState
-            title={ui.start.leerTitel}
-            text={ui.start.leerText}
-            bildName="leer-start"
-            action={<Button onClick={() => setCreateOpen(true)}>{ui.start.neuesProjekt}</Button>}
-          />
-        </div>
-      ) : (
-        <section className="anim-auf anim-auf-2">
+      {index.length > 0 && (
+        <section className="anim-auf anim-auf-1">
           <h2 className="text-xl font-semibold">{ui.start.projekteTitel}</h2>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             {index.map((meta) => (
@@ -256,6 +246,57 @@ export function StartScreen() {
           </div>
         </section>
       )}
+
+      <section className="anim-auf anim-auf-2">
+        <h2 className="text-xl font-semibold">{ui.start.soFunktioniertTitel}</h2>
+        <div className="mt-4 grid gap-4 md:grid-cols-3">
+          {ui.start.schritte.map((schritt, i) => (
+            <Card key={schritt.titel} className="flex flex-col">
+              <span
+                aria-hidden
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-aurora-balken text-base font-semibold text-white"
+              >
+                {i + 1}
+              </span>
+              <h3 className="mt-3 font-semibold">{schritt.titel}</h3>
+              <p className="mt-1 text-sm text-sekundaer">{schritt.text}</p>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <section className="anim-auf anim-auf-3">
+        <h2 className="text-xl font-semibold">{ui.start.stoebernTitel}</h2>
+        <p className="mt-1 max-w-prose text-sm text-sekundaer">{ui.start.stoebernText}</p>
+        <div className="mt-4 grid gap-4 md:grid-cols-3">
+          <Link to="/referenz">
+            <Card interaktiv className="h-full">
+              <h3 className="font-semibold text-primaer">{ui.start.stoebernReferenz} →</h3>
+              <p className="mt-1 text-sm text-sekundaer">{ui.start.stoebernReferenzText}</p>
+            </Card>
+          </Link>
+          <Link to="/materialien">
+            <Card interaktiv className="h-full">
+              <h3 className="font-semibold text-primaer">{ui.start.stoebernMaterial} →</h3>
+              <p className="mt-1 text-sm text-sekundaer">{ui.start.stoebernMaterialText}</p>
+            </Card>
+          </Link>
+          <Link to="/prozess">
+            <Card interaktiv className="h-full">
+              <h3 className="font-semibold text-primaer">{ui.start.stoebernProzess} →</h3>
+              <p className="mt-1 text-sm text-sekundaer">{ui.start.stoebernProzessText}</p>
+            </Card>
+          </Link>
+        </div>
+      </section>
+
+      <section className="anim-auf anim-auf-4 flex flex-col items-start gap-3 rounded-karte bg-primaer/5 p-6 md:flex-row md:items-center md:justify-between">
+        <div className="max-w-prose">
+          <h2 className="text-lg font-semibold">{ui.start.eigenesProjekt}</h2>
+          <p className="mt-1 text-sm text-sekundaer">{ui.start.eigenesProjektText}</p>
+        </div>
+        <Button onClick={() => setCreateOpen(true)}>{ui.start.neuesProjekt}</Button>
+      </section>
 
       <Modal open={createOpen} title={ui.start.neuesProjekt} onClose={() => setCreateOpen(false)}>
         <div className="space-y-4">

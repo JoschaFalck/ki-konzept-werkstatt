@@ -14,6 +14,8 @@ export function ReferenzScreen() {
   const activeDim = dim ?? diagnoseContent.dimensions[0].id;
   const seite = referenzrahmen[activeDim];
   const vertiefung = linksForContext(activeDim);
+  // Funktioniert mit Projektkontext (/p/:id/referenz) und projektfrei (/referenz).
+  const basis = id ? `/p/${id}/referenz` : '/referenz';
 
   return (
     <div className="space-y-6">
@@ -31,7 +33,7 @@ export function ReferenzScreen() {
             {diagnoseContent.dimensions.map((d) => (
               <li key={d.id}>
                 <Link
-                  to={`/p/${id}/referenz/${d.id}`}
+                  to={`${basis}/${d.id}`}
                   aria-current={d.id === activeDim ? 'page' : undefined}
                   className={`flex items-center gap-2 rounded px-3 py-2 text-sm ${
                     d.id === activeDim

@@ -130,6 +130,10 @@ export function App() {
             <Route path="massnahmen" element={<MassnahmenScreen />} />
             <Route path="prozess" element={<ProzessScreen />} />
           </Route>
+          {/* Projektfreies Stöbern (S7/S10 ohne Projektkontext) */}
+          <Route path="/referenz" element={<ReferenzScreen />} />
+          <Route path="/referenz/:dim" element={<ReferenzScreen />} />
+          <Route path="/prozess" element={<ProzessScreen />} />
           <Route path="/materialien" element={<MaterialienScreen />} />
           <Route path="/hinweise" element={<HinweiseScreen />} />
           <Route path="/herleitung" element={<HerleitungScreen />} />

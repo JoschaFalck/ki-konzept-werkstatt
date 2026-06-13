@@ -1,5 +1,10 @@
 import type { Project } from '../../types/schemas';
-import { buildConceptDocument, type ConceptDeps } from './conceptModel';
+import {
+  buildConceptDocument,
+  buildSectionDocument,
+  type ConceptDeps,
+  type ConceptDocument,
+} from './conceptModel';
 
 // Markdown-Export: spiegelt die DOCX-Gliederung (Spezifikation 5.5).
 
@@ -7,8 +12,8 @@ function escapeCell(text: string): string {
   return text.replace(/\|/g, '\\|').replace(/\n+/g, ' ');
 }
 
-export function exportConceptMarkdown(project: Project, deps: ConceptDeps): string {
-  const doc = buildConceptDocument(project, deps);
+/** Rendert ein beliebiges Konzept-Dokument als Markdown. */
+export function renderMarkdown(doc: ConceptDocument): string {
   const lines: string[] = [];
 
   lines.push(`# ${doc.title}`);
@@ -49,4 +54,16 @@ export function exportConceptMarkdown(project: Project, deps: ConceptDeps): stri
   });
 
   return lines.join('\n');
+}
+
+export function exportConceptMarkdown(project: Project, deps: ConceptDeps): string {
+  return renderMarkdown(buildConceptDocument(project, deps));
+}
+
+export function exportSectionMarkdown(
+  project: Project,
+  deps: ConceptDeps,
+  sectionId: string,
+): string {
+  return renderMarkdown(buildSectionDocument(project, deps, sectionId));
 }

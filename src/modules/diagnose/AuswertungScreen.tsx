@@ -9,9 +9,31 @@ import { PrintButton } from '../../components/PrintButton';
 import { RadarChart } from '../../components/RadarChart';
 import { ZahlAnimation } from '../../components/ZahlAnimation';
 import { computeAuswertung } from '../../lib/auswertung';
-import { diagnoseContent, DIM_CHIP_CLASSES, hebelContent, linksContent } from '../../lib/content';
+import {
+  diagnoseContent,
+  DIM_CHIP_CLASSES,
+  hebelContent,
+  linksContent,
+  linksForContext,
+} from '../../lib/content';
+import type { LinkEntry } from '../../types/contentSchemas';
 import { useAppStore } from '../../store';
 import type { HebelText } from '../../types/contentSchemas';
+
+/** Bis zu drei eindeutige Materialien für eine Menge von Dimensionen. */
+function materialsForDims(dimIds: string[]): LinkEntry[] {
+  const seen = new Set<string>();
+  const result: LinkEntry[] = [];
+  for (const dimId of dimIds) {
+    for (const link of linksForContext(dimId)) {
+      if (!seen.has(link.id)) {
+        seen.add(link.id);
+        result.push(link);
+      }
+    }
+  }
+  return result.slice(0, 3);
+}
 
 function HebelBox({ haupt, zusatz }: { haupt: HebelText; zusatz: HebelText[] }) {
   const linksFor = (h: HebelText) => linksContent.links.filter((l) => h.linkIds.includes(l.id));
@@ -78,6 +100,9 @@ export function AuswertungScreen() {
 
   const dimTitle = (dimId: string) =>
     diagnoseContent.dimensions.find((d) => d.id === dimId)?.title ?? dimId;
+
+  const staerkenMaterial = materialsForDims(auswertung.staerken);
+  const feldMaterial = materialsForDims(auswertung.entwicklungsfelder);
 
   return (
     <div className="space-y-6">
@@ -166,11 +191,23 @@ export function AuswertungScreen() {
           {auswertung.staerken.length === 0 ? (
             <p className="mt-2 text-sm text-sekundaer">—</p>
           ) : (
-            <ul className="mt-2 list-disc pl-5 text-sekundaer">
-              {auswertung.staerken.map((dimId) => (
-                <li key={dimId}>{dimTitle(dimId)}</li>
-              ))}
-            </ul>
+            <>
+              <ul className="mt-2 list-disc pl-5 text-sekundaer">
+                {auswertung.staerken.map((dimId) => (
+                  <li key={dimId}>{dimTitle(dimId)}</li>
+                ))}
+              </ul>
+              {staerkenMaterial.length > 0 && (
+                <div className="mt-4 border-t border-sekundaer/15 pt-4 print-hidden">
+                  <p className="text-sm text-sekundaer">{ui.auswertung.staerkenMaterial}</p>
+                  <div className="mt-3 grid gap-3">
+                    {staerkenMaterial.map((l) => (
+                      <MaterialKarte key={l.id} eintrag={l} />
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </Card>
         <Card>
@@ -180,6 +217,16 @@ export function AuswertungScreen() {
               <li key={dimId}>{dimTitle(dimId)}</li>
             ))}
           </ul>
+          {feldMaterial.length > 0 && (
+            <div className="mt-4 border-t border-sekundaer/15 pt-4 print-hidden">
+              <p className="text-sm text-sekundaer">{ui.auswertung.entwicklungsfelderMaterial}</p>
+              <div className="mt-3 grid gap-3">
+                {feldMaterial.map((l) => (
+                  <MaterialKarte key={l.id} eintrag={l} />
+                ))}
+              </div>
+            </div>
+          )}
         </Card>
       </div>
 

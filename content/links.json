@@ -54,6 +54,24 @@
       "contexts": ["d2", "sec-unterricht"]
     },
     {
+      "id": "grafik-provokation",
+      "label": "Grafik: Provokation durch Design",
+      "type": "grafik",
+      "datei": "materialien/architektur-provokation.jpg",
+      "lizenz": "CC BY-SA 4.0 · Joscha Falck",
+      "beschreibung": "Gute Aufgaben machen Denken unvermeidbar: KI-Output als Material, nicht als Ersatz — die kognitive Konfliktzone als Kern aktivierender Aufgaben.",
+      "contexts": ["d2", "sec-unterricht"]
+    },
+    {
+      "id": "grafik-kippt",
+      "label": "Grafik: Die Architektur kippt",
+      "type": "grafik",
+      "datei": "materialien/architektur-kippt.jpg",
+      "lizenz": "CC BY-SA 4.0 · Joscha Falck",
+      "beschreibung": "Lernwirksamkeit entsteht nur im Zusammenspiel: Ohne Fundament, Integration oder Aktivierung bleibt der KI-Einsatz wirkungslos.",
+      "contexts": ["d1", "sec-praeambel"]
+    },
+    {
       "id": "link-leitfaden-aufgaben",
       "label": "Leitfaden: Aufgabenkultur mit KI",
       "type": "artikel",

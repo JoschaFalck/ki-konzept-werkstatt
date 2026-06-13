@@ -125,6 +125,64 @@
               "value": "Beteiligung: Regeln für Schüler:innen gehören in Lehrerkonferenz und Schulforum/Schulkonferenz; SMV und Elternbeirat sollten gehört werden (vgl. Diagnose d1-i5)."
             }
           ]
+        },
+        {
+          "id": "tpl-regeln-b",
+          "label": "Variante B: Schrittweise Einführung mit Erprobungsphase",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Unsere Schule führt verbindliche KI-Regeln schrittweise ein, statt sie auf einen Schlag zu beschließen. In einer ersten Erprobungsphase im Zeitraum "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Erprobungszeitraum",
+              "placeholder": "z. B. zweites Halbjahr 2026/27",
+              "required": true,
+              "multiline": false
+            },
+            {
+              "type": "text",
+              "value": " gelten folgende vorläufige Grundregeln für die KI-Nutzung durch Schüler:innen: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Vorläufige Grundregeln",
+              "placeholder": "z. B. Kennzeichnungspflicht, erlaubte/nicht erlaubte Nutzungen, Datenschutz — bewusst schlank für den Start",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Erfahrungen aus der Erprobung werden gesammelt und ausgewertet durch: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Verantwortung und Auswertung",
+              "placeholder": "Funktionsbezeichnung, keine Namen — wer sammelt Rückmeldungen, wann wird ausgewertet?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Über die endgültige, verbindliche Fassung der Regeln entscheidet auf Basis der Auswertung: "
+            },
+            {
+              "type": "field",
+              "id": "f4",
+              "label": "Beschlussweg der endgültigen Fassung",
+              "placeholder": "z. B. Lehrerkonferenz nach Anhörung von SMV und Elternbeirat, bis Ende des Schuljahres",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "hint",
+              "value": "Variante B eignet sich für Kollegien mit großer Heterogenität in der Haltung (vgl. Diagnose d1-i4): Erprobung senkt Widerstände, braucht aber einen verbindlichen Auswertungs- und Entscheidungstermin, damit kein Dauerprovisorium entsteht."
+            }
+          ]
         }
       ]
     },
@@ -665,6 +723,64 @@
             {
               "type": "hint",
               "value": "Bezug zur Diagnose: Dimension d6. Die Wiederholung der Selbstdiagnose mit diesem Werkzeug ist ein einfaches, vergleichbares Evaluationsinstrument."
+            }
+          ]
+        },
+        {
+          "id": "tpl-steuerung-b",
+          "label": "Variante B: Verantwortung auf mehrere Schultern verteilen",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Unsere Schule verankert die KI-Schulentwicklung bewusst nicht bei einer Einzelperson, sondern verteilt sie auf mehrere Rollen. Folgende Funktionen tragen gemeinsam Verantwortung: "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Beteiligte Rollen und ihre Aufgaben",
+              "placeholder": "Funktionsbezeichnungen, keine Namen — z. B. Schulleitung (Mandat), Steuergruppe (Koordination), Fachschaftsleitungen (Umsetzung), Systembetreuung (Technik/Datenschutz)",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Diese Rollen stimmen sich ab und treffen Entscheidungen auf folgendem Weg: "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Abstimmungs- und Entscheidungswege",
+              "placeholder": "z. B. feste Sitzungen der Steuergruppe, Berichtspflicht in der Lehrerkonferenz, Schnittstelle zur Schulleitung",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Damit das Thema bei Personalwechsel nicht zusammenbricht, sichern wir die Kontinuität durch: "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Absicherung gegen Single Point of Failure",
+              "placeholder": "z. B. dokumentierte Zuständigkeiten, Doppelbesetzung von Schlüsselrollen, Einarbeitung neuer Kolleg:innen",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Ob unsere Maßnahmen wirken, überprüfen wir folgendermaßen: "
+            },
+            {
+              "type": "field",
+              "id": "f4",
+              "label": "Evaluation und Fortschreibung",
+              "placeholder": "z. B. Wiederholung der Selbstdiagnose nach einem Jahr, kurze Befragungen, jährlicher Auswertungstermin",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "hint",
+              "value": "Bezug zur Diagnose: Dimension d6, insbesondere d6-i1 (Verantwortungsstruktur). Diese Variante adressiert gezielt das verbreitete Held:innen-Modell, bei dem alles an einer engagierten Person hängt."
             }
           ]
         }

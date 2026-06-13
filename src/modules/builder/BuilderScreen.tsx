@@ -14,8 +14,8 @@ import {
   linksForContext,
   textgeruesteContent,
 } from '../../lib/content';
-import { exportConcept } from '../../lib/export/docx';
-import { exportConceptMarkdown } from '../../lib/export/markdown';
+import { exportConcept, exportSection } from '../../lib/export/docx';
+import { exportConceptMarkdown, exportSectionMarkdown } from '../../lib/export/markdown';
 import { svgToPng } from '../../lib/export/chartToPng';
 import { checkExportGate, sectionStatus, type SectionStatus } from '../../lib/exportGate';
 import { slugify } from '../../lib/persistence';
@@ -188,6 +188,32 @@ export function BuilderScreen() {
     markExported();
   };
 
+  // Kapitelweiser Export: eigenes Gate nur für das aktive Kapitel.
+  const sectionGate = checkExportGate([active], { [active.id]: state });
+  const sectionDateiname = `${slugify(project.title)}_${active.id}`;
+
+  const handleExportSectionDocx = async () => {
+    if (!sectionGate.ok) {
+      setGateOpen(true);
+      return;
+    }
+    try {
+      const blob = await exportSection(project, exportDeps(), active.id);
+      downloadBlob(blob, `${sectionDateiname}.docx`);
+    } catch {
+      setDocxError(true);
+    }
+  };
+
+  const handleExportSectionMd = () => {
+    if (!sectionGate.ok) {
+      setGateOpen(true);
+      return;
+    }
+    const md = exportSectionMarkdown(project, exportDeps(), active.id);
+    downloadBlob(new Blob([md], { type: 'text/markdown' }), `${sectionDateiname}.md`);
+  };
+
   return (
     <div className="space-y-6">
       <div className="max-w-prose">
@@ -275,6 +301,15 @@ export function BuilderScreen() {
           {template && (
             <Card>
               <TemplateForm project={project} section={active} template={template} state={state} />
+              <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-sekundaer/15 pt-4 print-hidden">
+                <span className="text-sm text-sekundaer">{ui.builder.kapitelExport}</span>
+                <Button variant="secondary" onClick={() => void handleExportSectionDocx()}>
+                  {ui.builder.kapitelExportDocx}
+                </Button>
+                <Button variant="ghost" onClick={handleExportSectionMd}>
+                  {ui.builder.kapitelExportMd}
+                </Button>
+              </div>
             </Card>
           )}
         </div>

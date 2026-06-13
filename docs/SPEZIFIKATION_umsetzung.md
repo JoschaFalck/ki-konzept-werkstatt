@@ -179,6 +179,7 @@ Gerüste sind **strukturierte Segmente**, niemals Fließtext mit `[___]`-Magie:
 3. Kapitel 1–9 gem. Konzeptdokument; Kapitel „Ausgangslage" enthält Radar-Grafik (PNG, siehe 12.3) + tabellarische Mittelwerte + Hebel-Texte.
 4. Maßnahmenplan als Tabelle (Spalten: Maßnahme, Dimension, Verantwortung, Horizont, Wirkung/Aufwand, **Entlastung**); `deimplementationWaived` erscheint als „keine – zusätzliche Belastung bewusst in Kauf genommen".
 5. Formatierung: Überschriften Heading 1/2, 11-pt-Grundschrift, keine Farben außer Grautönen (druckerfreundlich). Markdown-Export spiegelt dieselbe Gliederung.
+6. **Kapitelweiser Export (ergänzt Juni 2026):** Jedes Builder-Kapitel kann einzeln als DOCX/MD exportiert werden (`exportSection` / `exportSectionMarkdown`), mit eigenem Export-Gate nur für dieses Kapitel — ohne Deckblatt-Maßnahmenplan und ohne Ausgangslage. Für Teilkonzepte und die Weitergabe einzelner Kapitel an Fachschaften.
 
 ---
 
