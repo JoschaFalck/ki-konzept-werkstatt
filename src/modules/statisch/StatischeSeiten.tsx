@@ -10,12 +10,12 @@ import {
 function StaticPage({ title, body, bildName }: { title: string; body: string; bildName?: string }) {
   const bildUrl = bildName ? bild(bildName) : null;
   return (
-    <article className="anim-auf mx-auto max-w-prose rounded-karte bg-karte p-6 shadow-schwebend md:p-8">
+    <article className="anim-auf rounded-karte bg-karte p-6 shadow-schwebend md:p-8">
       {bildUrl && (
         <img
           src={bildUrl}
           alt=""
-          className="mb-6 w-full rounded-karte object-cover shadow-schwebend"
+          className="mb-6 max-h-72 w-full rounded-karte object-cover shadow-schwebend"
         />
       )}
       <h1 className="text-2xl font-semibold">{title}</h1>
