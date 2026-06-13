@@ -13,6 +13,8 @@ import d6Md from '../../content/referenzrahmen/d6.md?raw';
 import d7Md from '../../content/referenzrahmen/d7.md?raw';
 import hinweiseMd from '../../content/hinweise.md?raw';
 import herleitungMd from '../../content/herleitung.md?raw';
+import impressumMd from '../../content/impressum.md?raw';
+import datenschutzMd from '../../content/datenschutz.md?raw';
 import {
   DiagnoseContentSchema,
   HebelContentSchema,
@@ -52,6 +54,8 @@ export const referenzrahmen = Object.fromEntries(
 
 export const hinweiseSeite = parseFrontmatter(hinweiseMd);
 export const herleitungSeite = parseFrontmatter(herleitungMd);
+export const impressumSeite = parseFrontmatter(impressumMd);
+export const datenschutzSeite = parseFrontmatter(datenschutzMd);
 
 export function dimensionById(id: string) {
   return diagnoseContent.dimensions.find((d) => d.id === id);

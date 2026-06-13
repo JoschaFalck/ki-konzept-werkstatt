@@ -1,6 +1,11 @@
 import { MarkdownView } from '../../components/MarkdownView';
 import { bild } from '../../lib/bilder';
-import { herleitungSeite, hinweiseSeite } from '../../lib/content';
+import {
+  datenschutzSeite,
+  herleitungSeite,
+  hinweiseSeite,
+  impressumSeite,
+} from '../../lib/content';
 
 function StaticPage({ title, body, bildName }: { title: string; body: string; bildName?: string }) {
   const bildUrl = bildName ? bild(bildName) : null;
@@ -33,4 +38,12 @@ export function HinweiseScreen() {
 
 export function HerleitungScreen() {
   return <StaticPage title={herleitungSeite.meta.title ?? ''} body={herleitungSeite.body} />;
+}
+
+export function ImpressumScreen() {
+  return <StaticPage title={impressumSeite.meta.title ?? ''} body={impressumSeite.body} />;
+}
+
+export function DatenschutzScreen() {
+  return <StaticPage title={datenschutzSeite.meta.title ?? ''} body={datenschutzSeite.body} />;
 }

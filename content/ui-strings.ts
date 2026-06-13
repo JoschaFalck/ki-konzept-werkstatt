@@ -8,8 +8,16 @@ export const ui = {
     claim:
       'Entwickeln Sie das KI-Konzept Ihrer Schule — strukturiert, im Team, ohne Datenübertragung.',
     footerFamilie: 'Ein Werkzeug aus der Familie der KI-Werkstätten von Joscha Falck',
-    footerLizenz: 'Lizenz: CC BY-SA 4.0',
+    footerLizenz: 'CC BY 4.0 · Joscha Falck',
     footerVersion: 'Version',
+    navReferenz: 'Referenzrahmen',
+    navMaterial: 'Materialbibliothek',
+    navProzess: 'Prozessbegleitung',
+    navHinweise: 'Team-Hinweise',
+    navHerleitung: 'Herleitung',
+    impressum: 'Impressum',
+    datenschutz: 'Datenschutz',
+    kaffeekasse: 'Kaffeekasse',
     gespeichert: 'Gespeichert',
     speichert: 'Speichert …',
     zurueck: 'Zurück',
@@ -40,6 +48,7 @@ export const ui = {
     heroTitel2: 'Strukturiert. Im Team. Ohne Cloud.',
     heroHinweis: 'Keine Anmeldung, keine Datenübertragung — alles bleibt auf Ihrem Gerät.',
     projekteTitel: 'Ihre Projekte',
+    projektFortsetzen: 'Projekt fortsetzen',
     soFunktioniertTitel: 'So arbeiten Sie mit der Werkstatt',
     schritte: [
       {

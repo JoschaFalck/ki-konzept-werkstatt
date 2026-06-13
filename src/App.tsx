@@ -17,7 +17,12 @@ import { ReferenzScreen } from './modules/referenz/ReferenzScreen';
 import { BuilderScreen } from './modules/builder/BuilderScreen';
 import { MassnahmenScreen } from './modules/massnahmen/MassnahmenScreen';
 import { ProzessScreen } from './modules/prozess/ProzessScreen';
-import { HinweiseScreen, HerleitungScreen } from './modules/statisch/StatischeSeiten';
+import {
+  HinweiseScreen,
+  HerleitungScreen,
+  ImpressumScreen,
+  DatenschutzScreen,
+} from './modules/statisch/StatischeSeiten';
 import { MaterialienScreen } from './modules/materialien/MaterialienScreen';
 
 function StorageBanners() {
@@ -57,7 +62,7 @@ function Layout() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="print-hidden sticky top-0 z-20 border-b border-sekundaer/10 bg-flaeche/85 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-4 py-3">
+        <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-3">
           <Link to="/" className="flex items-center gap-2 font-semibold text-primaer">
             <span
               aria-hidden
@@ -67,7 +72,26 @@ function Layout() {
             </span>
             {ui.app.titel}
           </Link>
-          <SaveIndicator />
+          <nav aria-label="Inhalte" className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+            <Link to="/referenz" className="text-sekundaer hover:text-primaer">
+              {ui.app.navReferenz}
+            </Link>
+            <Link to="/materialien" className="text-sekundaer hover:text-primaer">
+              {ui.app.navMaterial}
+            </Link>
+            <Link to="/prozess" className="text-sekundaer hover:text-primaer">
+              {ui.app.navProzess}
+            </Link>
+            <Link to="/hinweise" className="text-sekundaer hover:text-primaer">
+              {ui.app.navHinweise}
+            </Link>
+            <Link to="/herleitung" className="text-sekundaer hover:text-primaer">
+              {ui.app.navHerleitung}
+            </Link>
+          </nav>
+          <div className="ml-auto">
+            <SaveIndicator />
+          </div>
         </div>
       </header>
       <StorageBanners />
@@ -75,22 +99,35 @@ function Layout() {
         <Outlet />
       </main>
       <footer className="print-hidden bg-tinte text-white/80">
-        <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-2 px-4 py-6 text-sm">
-          <span>{ui.app.footerFamilie}</span>
-          <span className="flex flex-wrap gap-4">
-            <Link to="/materialien" className="underline hover:text-white">
-              {ui.materialien.titel}
-            </Link>
-            <Link to="/hinweise" className="underline hover:text-white">
-              {ui.hinweise.titel}
-            </Link>
-            <Link to="/herleitung" className="underline hover:text-white">
-              {ui.herleitung.titel}
-            </Link>
-            <span>{ui.app.footerLizenz}</span>
-            <span>
+        <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-6 text-sm">
+          <span className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <a
+              href="https://www.joschafalck.de"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="hover:text-white"
+            >
+              {ui.app.footerLizenz}
+            </a>
+            <span className="text-white/50">
               {ui.app.footerVersion} {CONTENT_VERSION}
             </span>
+          </span>
+          <span className="flex flex-wrap gap-4">
+            <Link to="/impressum" className="underline hover:text-white">
+              {ui.app.impressum}
+            </Link>
+            <Link to="/datenschutz" className="underline hover:text-white">
+              {ui.app.datenschutz}
+            </Link>
+            <a
+              href="https://joschafalck.de/kaffeekasse/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="underline hover:text-white"
+            >
+              {ui.app.kaffeekasse}
+            </a>
           </span>
         </div>
       </footer>
@@ -137,6 +174,8 @@ export function App() {
           <Route path="/materialien" element={<MaterialienScreen />} />
           <Route path="/hinweise" element={<HinweiseScreen />} />
           <Route path="/herleitung" element={<HerleitungScreen />} />
+          <Route path="/impressum" element={<ImpressumScreen />} />
+          <Route path="/datenschutz" element={<DatenschutzScreen />} />
         </Route>
         {/* Workshop-Modus ohne App-Chrome (S6) */}
         <Route path="/p/:id/diagnose/workshop" element={<ProjectLoader />}>

@@ -27,18 +27,12 @@ function HeroMotiv() {
       <img
         src={heroBild}
         alt=""
-        className="hidden max-h-64 w-auto rounded-karte object-cover shadow-schwebend-lg md:block"
+        className="w-full rounded-karte object-cover shadow-schwebend-lg"
       />
     );
   }
   return (
-    <svg
-      viewBox="0 0 220 200"
-      width="230"
-      height="209"
-      aria-hidden="true"
-      className="hidden shrink-0 md:block"
-    >
+    <svg viewBox="0 0 220 200" width="100%" aria-hidden="true" className="w-full">
       <polygon
         points="110,20 192,60 177,156 43,156 28,60"
         fill="none"
@@ -145,6 +139,9 @@ export function StartScreen() {
     text: string;
   } | null>(null);
 
+  // Jüngstes Projekt für den Schnellzugriff unter dem Hero-Bild.
+  const letztesProjekt = index[0] ?? null;
+
   const handleCreate = () => {
     const title = newTitle.trim();
     if (title === '') return;
@@ -210,7 +207,16 @@ export function StartScreen() {
             </div>
             <p className="mt-5 text-sm text-white/60">{ui.start.heroHinweis}</p>
           </div>
-          <HeroMotiv />
+          <div className="hidden w-[44%] shrink-0 flex-col gap-3 md:flex">
+            <HeroMotiv />
+            {letztesProjekt && (
+              <Link to={`/p/${letztesProjekt.id}`} className="print-hidden">
+                <Button variant="hero" className="w-full justify-center">
+                  {ui.start.projektFortsetzen}
+                </Button>
+              </Link>
+            )}
+          </div>
         </div>
         <input
           ref={fileInput}
