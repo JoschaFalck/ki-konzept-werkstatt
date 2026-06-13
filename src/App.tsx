@@ -30,7 +30,7 @@ function StorageBanners() {
   const quotaError = useAppStore((s) => s.quotaError);
   if (storageOk && !quotaError) return null;
   return (
-    <div className="mx-auto w-full max-w-5xl px-4 pt-4 print-hidden">
+    <div className="mx-auto w-full max-w-werkstatt px-4 pt-4 print-hidden">
       <Banner kind="error" title={ui.storage.bannerTitel}>
         {quotaError ? ui.storage.quotaText : ui.storage.bannerText}
       </Banner>
@@ -62,7 +62,7 @@ function Layout() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="print-hidden sticky top-0 z-20 border-b border-sekundaer/10 bg-flaeche/85 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-3">
+        <div className="mx-auto flex w-full max-w-werkstatt flex-wrap items-center gap-x-5 gap-y-2 px-4 py-3">
           <Link to="/" className="flex items-center gap-2 font-semibold text-primaer">
             <span
               aria-hidden
@@ -95,11 +95,11 @@ function Layout() {
         </div>
       </header>
       <StorageBanners />
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
+      <main className="mx-auto w-full max-w-werkstatt flex-1 px-4 py-8">
         <Outlet />
       </main>
       <footer className="print-hidden bg-tinte text-white/80">
-        <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-6 text-sm">
+        <div className="mx-auto flex w-full max-w-werkstatt flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-6 text-sm">
           <span className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <a
               href="https://www.joschafalck.de"

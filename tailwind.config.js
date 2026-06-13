@@ -48,6 +48,10 @@ export default {
       fontSize: {
         base: ['15px', '1.6'],
       },
+      maxWidth: {
+        // Inhaltsbreite analog zum KI-Raster-Builder (1200 px).
+        werkstatt: '1200px',
+      },
     },
   },
   plugins: [],
