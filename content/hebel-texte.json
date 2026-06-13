@@ -11,13 +11,13 @@
       "id": "hebel-2",
       "titel": "Unterricht und Prüfungskultur passen nicht zusammen",
       "text": "Ihre Einschätzungen zeigen eine Inkonsistenz: Im Unterricht ist KI bereits erkennbar integriert (Dimension „Lehren & Lernen“), die Prüfungs- und Bewertungskultur hat darauf aber noch kaum reagiert (Dimension „Prüfen & Bewerten“). Diese Lücke ist für Schüler:innen unmittelbar spürbar — sie lernen mit KI, werden aber geprüft, als gäbe es sie nicht. Das erzeugt Graubereiche und entwertet beides. Empfehlung: Machen Sie die Überprüfung Ihrer Leistungsnachweise zum nächsten Schwerpunkt, etwa mit einer systematischen Sichtung je Fachschaft und abgestimmten Bewertungsinstrumenten.",
-      "linkIds": ["link-raster-builder"]
+      "linkIds": ["link-raster-builder", "download-leitfaden-pruefen", "link-pruefen-und-ki"]
     },
     "governance": {
       "id": "hebel-3",
       "titel": "Ohne Steuerung versanden Maßnahmen",
-      "text": "Ihre Einschätzungen zeigen: Es fehlt eine tragfähige Steuerungsstruktur (Dimension „Steuerung & Schulentwicklung“). Erfahrungsgemäß versanden auch gute inhaltliche Maßnahmen, wenn niemand mit Mandat ihre Umsetzung verfolgt, Beschlüsse dokumentiert und das Thema in den Gremien wachhält. Empfehlung: Klären Sie vor weiteren inhaltlichen Maßnahmen die Verantwortungsfrage — eine beauftragte Steuergruppe mit klarem Auftrag der Schulleitung, verteilt auf mehrere Schultern. Das ist unspektakulär, aber die Voraussetzung dafür, dass alles andere trägt.",
-      "linkIds": []
+      "text": "Ihre Einschätzungen zeigen: Es fehlt eine tragfähige Steuerungsstruktur (Dimension „Steuerung & Schulentwicklung“). Erfahrungsgemäß versanden auch gute inhaltliche Maßnahmen, wenn niemand mit Mandat ihre Umsetzung verfolgt, Beschlüsse dokumentiert und das Thema in den Gremien wachhält. Empfehlung: Klären Sie vor weiteren inhaltlichen Maßnahmen die Verantwortungsfrage — eine beauftragte Steuergruppe mit klarem Auftrag der Schulleitung, verteilt auf mehrere Schultern. Das ist unspektakulär, aber die Voraussetzung dafür, dass alles andere trägt. Einen zugänglichen Fahrplan für die nächsten Schritte bietet das AKTIV-Framework.",
+      "linkIds": ["link-aktiv-framework"]
     },
     "spreizung": {
       "id": "hebel-4",

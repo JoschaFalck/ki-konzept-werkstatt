@@ -382,6 +382,84 @@
               "value": "Bezug zur Diagnose: Dimension d4. Wenn dort niedrige Werte vorliegen, gehört dieses Kapitel in den Maßnahmenplan, nicht nur ins Konzept."
             }
           ]
+        },
+        {
+          "id": "tpl-kompetenzen-b",
+          "label": "Variante B: Kompetenzaufbau am Modell ausrichten (Verstehen / Anwenden / Reflektieren / Mitgestalten)",
+          "segments": [
+            {
+              "type": "text",
+              "value": "Unsere Schule richtet den Aufbau der KI-Kompetenzen an einem gemeinsamen Modell aus (KI-Kompetenzmodell für Lehrende und Lernende; anschlussfähig an das OECD AI Literacy Framework). Wir unterscheiden vier Kompetenzbereiche und legen für jeden fest, wo und wie er aufgebaut wird.\n\nVerstehen (KI-Funktionsweise, Begriffe, Mechanismen): "
+            },
+            {
+              "type": "field",
+              "id": "f1",
+              "label": "Bereich „Verstehen“",
+              "placeholder": "In welchen Fächern und Jahrgangsstufen, mit welchen Bausteinen? z. B. Grundlagen im IT-/Informatikunterricht der Jgst. 7/8",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Anwenden (bewusste Bedienung, Steuerung und Anpassung von KI): "
+            },
+            {
+              "type": "field",
+              "id": "f2",
+              "label": "Bereich „Anwenden“",
+              "placeholder": "Wo üben Schüler:innen den zielgerichteten Einsatz? z. B. Schreibbegleitung in Deutsch, Recherchekritik in GSE",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Reflektieren (KI-Output kritisch bewerten, Eigenleistung und Risiken einordnen): "
+            },
+            {
+              "type": "field",
+              "id": "f3",
+              "label": "Bereich „Reflektieren“",
+              "placeholder": "Wo wird kritisches Prüfen und die Einordnung von Folgen geübt? z. B. Faktencheck, Ethik/Religion, Kennzeichnungskonventionen",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Mitgestalten (KI-Vorhaben entwickeln, diskutieren, teilen, an Entscheidungen mitwirken): "
+            },
+            {
+              "type": "field",
+              "id": "f4",
+              "label": "Bereich „Mitgestalten“",
+              "placeholder": "Welche Beteiligungs- und Projektformate? z. B. Mitwirkung der SMV an den KI-Regeln, Projektwochen, Wettbewerbe",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "text",
+              "value": "Den Aufbau über die Jahrgangsstufen (Niveaustufen I–III) sichern wir folgendermaßen ab und überprüfen ihn: "
+            },
+            {
+              "type": "field",
+              "id": "f5",
+              "label": "Progression und Verankerung",
+              "placeholder": "Wie wird der kumulative Aufbau gesichert (z. B. Spiralcurriculum, Zuständigkeit je Fachschaft, Überprüfungsrhythmus)?",
+              "required": true,
+              "multiline": true
+            },
+            {
+              "type": "hint",
+              "value": "Bezug zur Diagnose: Dimension d4 ist nach denselben vier Bereichen aufgebaut. Liegen dort niedrige Werte, gehört dieses Kapitel in den Maßnahmenplan."
+            },
+            {
+              "type": "hint",
+              "value": "Vertiefung: KI-Kompetenzmodell (Grafiken und Niveaustufen) sowie OECD AI Literacy Framework und PISA 2029 in der Materialbibliothek (Kontext sec-kompetenzen)."
+            },
+            {
+              "type": "hint",
+              "value": "Dringlichkeit: Ab 2029 prüft PISA Medien- und KI-Kompetenz — ein belastbares Argument für die verbindliche Verankerung gegenüber Kollegium und Gremien."
+            }
+          ]
         }
       ]
     },
