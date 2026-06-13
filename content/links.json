@@ -165,6 +165,40 @@
       "contexts": ["d4", "sec-kompetenzen"]
     },
     {
+      "id": "link-oecd-ailit",
+      "label": "Rahmen: OECD AI Literacy Framework",
+      "type": "artikel",
+      "url": "https://ailiteracyframework.org",
+      "beschreibung": "Der internationale Referenzrahmen für KI-Kompetenz (OECD, Entwurf 2025) — Bezugspunkt für die Einordnung des eigenen Kompetenzaufbaus.",
+      "contexts": ["d4", "sec-kompetenzen"]
+    },
+    {
+      "id": "download-oecd-ailit-de",
+      "label": "Download: OECD-KI-Kompetenzrahmen (deutsch, Entwurf 2025)",
+      "type": "download",
+      "url": "https://zembiblog.ch/wp-content/uploads/2025/12/KI-Kompetenzrahmen-OECD-Entwurf-2025-uebersetzt-und-angepasst-Stoltz-Schmid-Meier-2025.V1.0.pdf",
+      "lizenz": "Übersetzung und Anpassung: Stoltz / Schmid / Meier 2025 (V1.0)",
+      "beschreibung": "Die deutsche, an den DACH-Raum angepasste Fassung des OECD-Rahmens — gut lesbarer Einstieg für das Kollegium.",
+      "contexts": ["d4", "sec-kompetenzen"]
+    },
+    {
+      "id": "download-oecd-ailit-en",
+      "label": "Download: AI Literacy Framework (Original, englisch)",
+      "type": "download",
+      "url": "https://ailiteracyframework.org/wp-content/uploads/2025/05/AILitFramework_ReviewDraft.pdf",
+      "lizenz": "OECD / European Commission / Code.org u. a. (Review Draft 2025)",
+      "beschreibung": "Der englische Originalentwurf des AI Literacy Framework.",
+      "contexts": ["d4", "sec-kompetenzen"]
+    },
+    {
+      "id": "link-pisa-2029",
+      "label": "OECD: PISA 2029 — Media and AI Literacy",
+      "type": "artikel",
+      "url": "https://www.oecd.org/en/about/projects/pisa-2029-media-and-artificial-intelligence-literacy.html",
+      "beschreibung": "Ab 2029 prüft PISA Medien- und KI-Kompetenz. Die Seite zeigt, wie sich die internationale Leistungsmessung verändert — ein starkes Argument für die eigene Schulentwicklung.",
+      "contexts": ["d4", "sec-kompetenzen", "prozess", "d6"]
+    },
+    {
       "id": "link-aktiv-framework",
       "label": "Artikel: Das AKTIV-Framework (Manuel Flick)",
       "type": "artikel",

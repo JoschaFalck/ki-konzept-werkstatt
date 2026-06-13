@@ -40,6 +40,11 @@
       "id": "karte-8",
       "these": "Ein KI-Konzept, das fertig ist, ist falsch. Es kann nur einen gepflegten Arbeitsstand geben.",
       "hinweis": "Schlusskarte: Fortschreibung und Steuerung als Daueraufgabe."
+    },
+    {
+      "id": "karte-9",
+      "these": "Spätestens 2029 misst PISA die KI-Kompetenz unserer Schüler:innen. Sind wir darauf vorbereitet?",
+      "hinweis": "Dringlichkeits-Impuls: PISA 2029 macht KI-Kompetenz zum gemessenen Bildungsziel (vgl. Dimension d4). Eignet sich als Einstieg, um das Thema von der Kür zur Pflicht zu rahmen."
     }
   ]
 }
