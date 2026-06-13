@@ -72,27 +72,22 @@ function ProjectCard({ id, title, updatedAt }: { id: string; title: string; upda
     : 0;
 
   return (
-    <Card interaktiv>
-      <div className="flex items-start justify-between gap-4">
-        <div className="min-w-0">
-          <h3 className="truncate text-lg font-semibold">{title}</h3>
-          <p className="text-sm text-sekundaer">
-            {ui.start.zuletztGeaendert}: {formatDate(updatedAt)}
-          </p>
+    <Card interaktiv className="flex flex-wrap items-center gap-x-5 gap-y-3 p-4">
+      <div className="min-w-0 flex-1">
+        <h3 className="truncate font-semibold">{title}</h3>
+        <p className="text-xs text-sekundaer">
+          {ui.start.zuletztGeaendert}: {formatDate(updatedAt)} · {doneItems}/{totalItems}{' '}
+          {ui.diagnose.itemsEinheit}
+        </p>
+        <div className="mt-2">
+          <ProgressBar
+            value={doneItems}
+            max={totalItems}
+            label={`${ui.dashboard.module.diagnose.titel}: ${doneItems} ${ui.diagnose.itemsBearbeitet} ${totalItems}`}
+          />
         </div>
       </div>
-      <div className="mt-4 space-y-1">
-        <ProgressBar
-          value={doneItems}
-          max={totalItems}
-          label={`${ui.dashboard.module.diagnose.titel}: ${doneItems} ${ui.diagnose.itemsBearbeitet} ${totalItems}`}
-        />
-        <p className="text-xs text-sekundaer">
-          {ui.dashboard.module.diagnose.titel}: {doneItems} {ui.diagnose.itemsBearbeitet}{' '}
-          {totalItems} {ui.diagnose.itemsEinheit}
-        </p>
-      </div>
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="flex shrink-0 gap-2">
         <Link to={`/p/${id}`}>
           <Button>{ui.start.projektOeffnen}</Button>
         </Link>
@@ -240,7 +235,7 @@ export function StartScreen() {
       {index.length > 0 && (
         <section className="anim-auf anim-auf-1">
           <h2 className="text-xl font-semibold">{ui.start.projekteTitel}</h2>
-          <div className="mt-4 grid gap-4 md:grid-cols-2">
+          <div className="mt-4 flex flex-col gap-3 md:max-w-xl">
             {index.map((meta) => (
               <ProjectCard
                 key={meta.id}
