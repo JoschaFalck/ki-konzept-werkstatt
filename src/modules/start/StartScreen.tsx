@@ -201,6 +201,12 @@ export function StartScreen() {
               </Button>
             </div>
             <p className="mt-5 text-sm text-white/60">{ui.start.heroHinweis}</p>
+            <Link
+              to="/einfuehrung"
+              className="mt-3 inline-block text-sm text-white/80 underline underline-offset-2 hover:text-white print-hidden"
+            >
+              {ui.start.warumLink} →
+            </Link>
           </div>
           <div className="hidden w-[44%] shrink-0 flex-col gap-3 md:flex">
             <HeroMotiv />

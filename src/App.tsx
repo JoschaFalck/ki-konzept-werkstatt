@@ -18,6 +18,8 @@ import { BuilderScreen } from './modules/builder/BuilderScreen';
 import { MassnahmenScreen } from './modules/massnahmen/MassnahmenScreen';
 import { ProzessScreen } from './modules/prozess/ProzessScreen';
 import {
+  ArgumentationshilfeScreen,
+  EinfuehrungScreen,
   HinweiseScreen,
   HerleitungScreen,
   ImpressumScreen,
@@ -73,6 +75,9 @@ function Layout() {
             {ui.app.titel}
           </Link>
           <nav aria-label="Inhalte" className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+            <Link to="/einfuehrung" className="text-sekundaer hover:text-primaer">
+              {ui.app.navEinfuehrung}
+            </Link>
             <Link to="/referenz" className="text-sekundaer hover:text-primaer">
               {ui.app.navReferenz}
             </Link>
@@ -172,6 +177,8 @@ export function App() {
           <Route path="/referenz/:dim" element={<ReferenzScreen />} />
           <Route path="/prozess" element={<ProzessScreen />} />
           <Route path="/materialien" element={<MaterialienScreen />} />
+          <Route path="/einfuehrung" element={<EinfuehrungScreen />} />
+          <Route path="/argumentationshilfe" element={<ArgumentationshilfeScreen />} />
           <Route path="/hinweise" element={<HinweiseScreen />} />
           <Route path="/herleitung" element={<HerleitungScreen />} />
           <Route path="/impressum" element={<ImpressumScreen />} />

@@ -11,6 +11,8 @@ import d4Md from '../../content/referenzrahmen/d4.md?raw';
 import d5Md from '../../content/referenzrahmen/d5.md?raw';
 import d6Md from '../../content/referenzrahmen/d6.md?raw';
 import d7Md from '../../content/referenzrahmen/d7.md?raw';
+import einfuehrungMd from '../../content/einfuehrung.md?raw';
+import argumentationshilfeMd from '../../content/argumentationshilfe.md?raw';
 import hinweiseMd from '../../content/hinweise.md?raw';
 import herleitungMd from '../../content/herleitung.md?raw';
 import impressumMd from '../../content/impressum.md?raw';
@@ -52,6 +54,8 @@ export const referenzrahmen = Object.fromEntries(
   Object.entries(referenzRaw).map(([id, raw]) => [id, parseFrontmatter(raw)]),
 );
 
+export const einfuehrungSeite = parseFrontmatter(einfuehrungMd);
+export const argumentationshilfeSeite = parseFrontmatter(argumentationshilfeMd);
 export const hinweiseSeite = parseFrontmatter(hinweiseMd);
 export const herleitungSeite = parseFrontmatter(herleitungMd);
 export const impressumSeite = parseFrontmatter(impressumMd);
