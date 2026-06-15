@@ -36,13 +36,13 @@ export const ui = {
     eintraege: [
       {
         to: '/beispiel-grundschule',
-        titel: 'Beispiel: schlankes Grundsatzpapier',
-        text: 'Fiktive Grundschule, früh im Prozess — nur Präambel und Regeln, beschlussfähig in wenigen Sitzungen.',
+        titel: 'Beispiel: schlankes Konzept (Grundschule)',
+        text: 'Fiktive Grundschule, früh im Prozess — Haltung, Regeln und ein erster Kompetenzaufbau für die Klassen 1–4.',
       },
       {
         to: '/beispiel-weiterfuehrend',
         titel: 'Beispiel: vollständiges Rahmenkonzept',
-        text: 'Fiktive Mittelschule, weiter im Prozess — alle acht Bausteine in knapper Form.',
+        text: 'Fiktive Mittelschule — alle acht Bausteine samt KI-Kompetenzcurriculum nach Jahrgangsstufen.',
       },
       {
         to: '/faq',
