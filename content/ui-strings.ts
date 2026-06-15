@@ -14,6 +14,7 @@ export const ui = {
     navReferenz: 'Referenzrahmen',
     navMaterial: 'Materialbibliothek',
     navProzess: 'Prozessbegleitung',
+    navHilfe: 'Hilfe & Beispiele',
     navHinweise: 'Team-Hinweise',
     navHerleitung: 'Herleitung',
     impressum: 'Impressum',
@@ -27,6 +28,53 @@ export const ui = {
     schliessen: 'Schließen',
     drucken: 'Druckansicht öffnen',
     laden: 'Wird geladen …',
+  },
+  hilfe: {
+    titel: 'Hilfe & Beispiele',
+    intro:
+      'Begleitende Hilfen für die Arbeit am KI-Konzept: erfundene Beispielkonzepte, Antworten auf häufige Einwände, ein Glossar, ein Moderationsleitfaden und Vorlagen für die Kommunikation. Alle Texte sind Anregungen zum Anpassen — nicht zum Abschreiben.',
+    eintraege: [
+      {
+        to: '/beispiel-grundschule',
+        titel: 'Beispiel: schlankes Grundsatzpapier',
+        text: 'Fiktive Grundschule, früh im Prozess — nur Präambel und Regeln, beschlussfähig in wenigen Sitzungen.',
+      },
+      {
+        to: '/beispiel-weiterfuehrend',
+        titel: 'Beispiel: vollständiges Rahmenkonzept',
+        text: 'Fiktive Mittelschule, weiter im Prozess — alle acht Bausteine in knapper Form.',
+      },
+      {
+        to: '/faq',
+        titel: 'Häufige Einwände — und Antworten',
+        text: 'Typische Sätze aus dem Kollegium, sachlich aufgenommen statt weggewischt.',
+      },
+      {
+        to: '/glossar',
+        titel: 'Glossar',
+        text: 'Kurze, alltagsnahe Erklärungen der wichtigsten Begriffe für eine gemeinsame Verständigung.',
+      },
+      {
+        to: '/moderation',
+        titel: 'Moderationsleitfaden',
+        text: 'Ein erprobbarer 90-Minuten-Fahrplan für die erste Sitzung der Steuergruppe.',
+      },
+      {
+        to: '/vorlagen',
+        titel: 'Kommunikationsvorlagen',
+        text: 'Textbausteine für Elternbrief, Schüler-Merkblatt und einen Aushang fürs Lehrerzimmer.',
+      },
+      {
+        to: '/hinweise',
+        titel: 'Team-Hinweise',
+        text: 'Wie Sie ohne Konten und Server im Team zusammenarbeiten — über die gemeinsame Datei.',
+      },
+      {
+        to: '/herleitung',
+        titel: 'Herleitung der Kriterien',
+        text: 'Woher die sieben Dimensionen und ihre Niveaustufen stammen und worauf sie sich stützen.',
+      },
+    ],
   },
   fehler: {
     moduleTitel: 'In diesem Modul ist ein Fehler aufgetreten',

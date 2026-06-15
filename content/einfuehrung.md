@@ -56,6 +56,8 @@ Ein KI-Konzept muss nicht von Anfang an ein vollständiges Rahmenwerk sein. Wäh
 - **Modular wachsendes Dokument.** Sie beginnen mit zwei oder drei Kapiteln und schreiben fort. Der kapitelweise Export der Werkstatt unterstützt genau dieses schrittweise Vorgehen.
 - **Eingebettet oder eigenständig.** Als KI-Baustein innerhalb des Medienkonzepts oder als eigenes Dokument — je nachdem, wie Ihre Schulentwicklung organisiert ist.
 
+Wie zwei dieser Zuschnitte konkret klingen, zeigen die [Beispielkonzepte fiktiver Schulen unter „Hilfe & Beispiele"](#/hilfe).
+
 Ein Konzept richtet sich zudem an verschiedene Adressaten. Bewährt hat sich, aus einer Langfassung schlankere Auszüge abzuleiten:
 
 - die **Langfassung** als Beschlussgrundlage für die Gremien,

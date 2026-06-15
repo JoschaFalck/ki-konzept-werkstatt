@@ -13,6 +13,12 @@ import d6Md from '../../content/referenzrahmen/d6.md?raw';
 import d7Md from '../../content/referenzrahmen/d7.md?raw';
 import einfuehrungMd from '../../content/einfuehrung.md?raw';
 import argumentationshilfeMd from '../../content/argumentationshilfe.md?raw';
+import beispielGrundschuleMd from '../../content/beispiel-grundschule.md?raw';
+import beispielWeiterfuehrendMd from '../../content/beispiel-weiterfuehrend.md?raw';
+import faqMd from '../../content/faq.md?raw';
+import glossarMd from '../../content/glossar.md?raw';
+import moderationMd from '../../content/moderation.md?raw';
+import vorlagenMd from '../../content/vorlagen.md?raw';
 import hinweiseMd from '../../content/hinweise.md?raw';
 import herleitungMd from '../../content/herleitung.md?raw';
 import impressumMd from '../../content/impressum.md?raw';
@@ -56,6 +62,12 @@ export const referenzrahmen = Object.fromEntries(
 
 export const einfuehrungSeite = parseFrontmatter(einfuehrungMd);
 export const argumentationshilfeSeite = parseFrontmatter(argumentationshilfeMd);
+export const beispielGrundschuleSeite = parseFrontmatter(beispielGrundschuleMd);
+export const beispielWeiterfuehrendSeite = parseFrontmatter(beispielWeiterfuehrendMd);
+export const faqSeite = parseFrontmatter(faqMd);
+export const glossarSeite = parseFrontmatter(glossarMd);
+export const moderationSeite = parseFrontmatter(moderationMd);
+export const vorlagenSeite = parseFrontmatter(vorlagenMd);
 export const hinweiseSeite = parseFrontmatter(hinweiseMd);
 export const herleitungSeite = parseFrontmatter(herleitungMd);
 export const impressumSeite = parseFrontmatter(impressumMd);

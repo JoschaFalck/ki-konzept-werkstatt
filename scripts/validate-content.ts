@@ -81,7 +81,18 @@ for (let i = 1; i <= 7; i++) {
 }
 
 // Statische Seiten: Frontmatter mit title
-for (const file of ['einfuehrung.md', 'argumentationshilfe.md', 'hinweise.md', 'herleitung.md']) {
+for (const file of [
+  'einfuehrung.md',
+  'argumentationshilfe.md',
+  'beispiel-grundschule.md',
+  'beispiel-weiterfuehrend.md',
+  'faq.md',
+  'glossar.md',
+  'moderation.md',
+  'vorlagen.md',
+  'hinweise.md',
+  'herleitung.md',
+]) {
   try {
     const { meta } = parseFrontmatter(readFileSync(join(contentDir, file), 'utf-8'));
     if (!meta.title) fail(file, 'Frontmatter: title fehlt');

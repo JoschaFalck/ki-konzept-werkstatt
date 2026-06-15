@@ -19,11 +19,18 @@ import { MassnahmenScreen } from './modules/massnahmen/MassnahmenScreen';
 import { ProzessScreen } from './modules/prozess/ProzessScreen';
 import {
   ArgumentationshilfeScreen,
-  EinfuehrungScreen,
-  HinweiseScreen,
-  HerleitungScreen,
-  ImpressumScreen,
+  BeispielGrundschuleScreen,
+  BeispielWeiterfuehrendScreen,
   DatenschutzScreen,
+  EinfuehrungScreen,
+  FaqScreen,
+  GlossarScreen,
+  HerleitungScreen,
+  HilfeScreen,
+  HinweiseScreen,
+  ImpressumScreen,
+  ModerationScreen,
+  VorlagenScreen,
 } from './modules/statisch/StatischeSeiten';
 import { MaterialienScreen } from './modules/materialien/MaterialienScreen';
 
@@ -87,11 +94,8 @@ function Layout() {
             <Link to="/prozess" className="text-sekundaer hover:text-primaer">
               {ui.app.navProzess}
             </Link>
-            <Link to="/hinweise" className="text-sekundaer hover:text-primaer">
-              {ui.app.navHinweise}
-            </Link>
-            <Link to="/herleitung" className="text-sekundaer hover:text-primaer">
-              {ui.app.navHerleitung}
+            <Link to="/hilfe" className="text-sekundaer hover:text-primaer">
+              {ui.app.navHilfe}
             </Link>
           </nav>
           <div className="ml-auto">
@@ -179,6 +183,13 @@ export function App() {
           <Route path="/materialien" element={<MaterialienScreen />} />
           <Route path="/einfuehrung" element={<EinfuehrungScreen />} />
           <Route path="/argumentationshilfe" element={<ArgumentationshilfeScreen />} />
+          <Route path="/hilfe" element={<HilfeScreen />} />
+          <Route path="/beispiel-grundschule" element={<BeispielGrundschuleScreen />} />
+          <Route path="/beispiel-weiterfuehrend" element={<BeispielWeiterfuehrendScreen />} />
+          <Route path="/faq" element={<FaqScreen />} />
+          <Route path="/glossar" element={<GlossarScreen />} />
+          <Route path="/moderation" element={<ModerationScreen />} />
+          <Route path="/vorlagen" element={<VorlagenScreen />} />
           <Route path="/hinweise" element={<HinweiseScreen />} />
           <Route path="/herleitung" element={<HerleitungScreen />} />
           <Route path="/impressum" element={<ImpressumScreen />} />
